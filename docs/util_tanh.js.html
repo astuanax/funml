@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Perceptron.js - Documentation</title>
+    <title>util/tanh.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Perceptron.js</h1>
+    <h1 class="page-title">util/tanh.js</h1>
     
 
     
@@ -39,84 +39,17 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @class Perceptron
- * @classdesc Perceptron to train and predict
- * @see of
- * @example
- *
- * const m =  Perceptron.of([0.2365698, 0.4567897, 0.95989898, -0.457878787])
- *
- */
-let Perceptron = function (weights) {
-  this.weights = weights || []
-}
+            <pre class="prettyprint source linenums"><code>import ActivationFunction from '../ActivationFunction'
 
 /**
- * @memberOf Perceptron
- * @static
- * @function of
- * @desc Creates a Perceptron object
- * @param weights {array} Weigths for predicting
- * @returns {Perceptron}
- * @example
- *
- * const m =  Perceptron.of()
- * const train  = [...]
- * m.train(train, 0.1, 10000)
- *
+ * @function tanh
+ * @type {ActivationFunction}
  */
-Perceptron.of = function (val) {
-  if (val instanceof Perceptron) return val
-  if (this instanceof Perceptron) {
-    this.weights = val
-    return this
-  }
-  return new Perceptron(val)
-}
-
-/**
- * @memberOf Perceptron
- * @type {string}
- */
-Perceptron.prototype.type = 'Perceptron'
-
-/**
- * @memberOf Perceptron
- * @function Perceptron.predict
- * @param row {Array} Array of values to predict
- * @returns {Boolean}
- */
-Perceptron.prototype.predict = function (row) {
-  var activation = this.weights[0]
-  row.forEach((x, i) => {
-    activation += this.weights[i + 1] * x
-  })
-  return activation >= 0 ? 1 : 0
-}
-
-/**
- * @function train
- * @param train {Array} Dataset to train the preceptron
- * @param lRate {Number} Set the larning rate of the perceptron
- * @param nEpoch {Number} Set thenumber of iterations to train the perceptron
- */
-Perceptron.prototype.train = function (train, lRate, nEpoch) {
-  this.weights = Array.apply(null, Array(train[0].length)).map(x => 0)
-  for (let i = 0; i &lt; nEpoch; i++) {
-    train.forEach((x, idx) => {
-      const expected = x.slice(-1)[0]
-      const row = x.slice(0, -1)
-      const prediction = this.predict(row)
-      const error = expected - prediction
-      row.forEach((y, j) => {
-        this.weights[j + 1] += lRate * error * y
-      })
-    })
-  }
-}
-
-export default Perceptron
+const tanh = new ActivationFunction(
+  x => Math.tanh(x),
+  y => 1 - (y * y)
+)
+export default tanh
 </code></pre>
         </article>
     </section>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Perceptron.js - Documentation</title>
+    <title>ActivationFunction - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,97 +29,197 @@
 
 <div id="main">
     
-    <h1 class="page-title">Perceptron.js</h1>
+    <h1 class="page-title">ActivationFunction</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @class Perceptron
- * @classdesc Perceptron to train and predict
- * @see of
- * @example
- *
- * const m =  Perceptron.of([0.2365698, 0.4567897, 0.95989898, -0.457878787])
- *
- */
-let Perceptron = function (weights) {
-  this.weights = weights || []
-}
+        <h2>
+        ActivationFunction
+        </h2>
+        
+    
+</header>
 
-/**
- * @memberOf Perceptron
- * @static
- * @function of
- * @desc Creates a Perceptron object
- * @param weights {array} Weigths for predicting
- * @returns {Perceptron}
- * @example
- *
- * const m =  Perceptron.of()
- * const train  = [...]
- * m.train(train, 0.1, 10000)
- *
- */
-Perceptron.of = function (val) {
-  if (val instanceof Perceptron) return val
-  if (this instanceof Perceptron) {
-    this.weights = val
-    return this
-  }
-  return new Perceptron(val)
-}
+<article>
+    <div class="container-overview">
+    
+        
+<div class="section-method">
 
-/**
- * @memberOf Perceptron
- * @type {string}
- */
-Perceptron.prototype.type = 'Perceptron'
+    
 
-/**
- * @memberOf Perceptron
- * @function Perceptron.predict
- * @param row {Array} Array of values to predict
- * @returns {Boolean}
- */
-Perceptron.prototype.predict = function (row) {
-  var activation = this.weights[0]
-  row.forEach((x, i) => {
-    activation += this.weights[i + 1] * x
-  })
-  return activation >= 0 ? 1 : 0
-}
+    <h4 class="name" id="ActivationFunction"><span class="type-signature"></span>new ActivationFunction<span class="signature">(func, dfunc)</span><span class="type-signature"></span></h4>
 
-/**
- * @function train
- * @param train {Array} Dataset to train the preceptron
- * @param lRate {Number} Set the larning rate of the perceptron
- * @param nEpoch {Number} Set thenumber of iterations to train the perceptron
- */
-Perceptron.prototype.train = function (train, lRate, nEpoch) {
-  this.weights = Array.apply(null, Array(train[0].length)).map(x => 0)
-  for (let i = 0; i &lt; nEpoch; i++) {
-    train.forEach((x, idx) => {
-      const expected = x.slice(-1)[0]
-      const row = x.slice(0, -1)
-      const prediction = this.predict(row)
-      const error = expected - prediction
-      row.forEach((y, j) => {
-        this.weights[j + 1] += lRate * error * y
-      })
-    })
-  }
-}
+    
 
-export default Perceptron
-</code></pre>
-        </article>
-    </section>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ActivationFunction.js.html">ActivationFunction.js</a>, <a href="ActivationFunction.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dfunc</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
