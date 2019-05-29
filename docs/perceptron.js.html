@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home - Documentation</title>
+    <title>perceptron.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,29 +29,91 @@
 
 <div id="main">
     
+    <h1 class="page-title">perceptron.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @class Perceptron
+ * @classdesc Perceptron to train and execute
+ * @see of
+ * @example
+ *
+ * const m =  Perceptron.of()
+ *
+ */
+let Perceptron = function (weights) {
+  this.weights = weights || []
+}
 
+/**
+ * @memberOf Matrix
+ * @static
+ * @function of
+ * @desc Creates a Matrix object and flattens the Matrix
+ * @param val {array|function} An array of arrays
+ * @returns {Matrix}
+ * @example
+ *
+ * const m =  Perceptron.of()
+ *
+ */
+Perceptron.of = function (val) {
+  if (val instanceof Perceptron) return val
+  if (this instanceof Perceptron) {
+    this.weights = val
+    return this
+  }
+  return new Perceptron(val)
+}
 
+Perceptron.prototype.type = 'Perceptron'
 
+/**
+ * @function predict
+ * @param row
+ * @param weights
+ * @returns {number}
+ */
+Perceptron.prototype.predict = function (row) {
+  var activation = this.weights[0]
+  row.forEach((x, i) => {
+    activation += this.weights[i + 1] * x
+  })
+  return activation >= 0 ? 1 : 0
+}
 
+/**
+ * @function train
+ * @param train
+ * @param lRate
+ * @param nEpoch
+ */
+Perceptron.prototype.train = function (train, lRate, nEpoch) {
+  this.weights = Array.apply(null, Array(train[0].length)).map(x => 0)
+  for (let i = 0; i &lt; nEpoch; i++) {
+    train.forEach((x, idx) => {
+      const expected = x.slice(-1)[0]
+      const row = x.slice(0, -1)
+      const prediction = this.predict(row)
+      const error = expected - prediction
+      row.forEach((y, j) => {
+        this.weights[j + 1] += lRate * error * y
+      })
+    })
+  }
+}
 
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>funml</h1><p>Machine learning with functional undertones.</p></article>
+export default Perceptron
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

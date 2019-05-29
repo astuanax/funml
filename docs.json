@@ -1,9 +1,608 @@
 [
     {
+        "comment": "",
+        "meta": {
+            "range": [
+                9,
+                30
+            ],
+            "filename": "index.js",
+            "lineno": 1,
+            "columnno": 9,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000003",
+                "name": "exports.Perceptron",
+                "type": "Identifier"
+            }
+        },
+        "undocumented": true,
+        "name": "Perceptron",
+        "longname": "Perceptron",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * @class Perceptron\n * @classdesc Perceptron to train and execute\n * @see of\n * @example\n *\n * const m =  Perceptron.of()\n *\n */",
+        "meta": {
+            "filename": "perceptron.js",
+            "lineno": 1,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {}
+        },
+        "kind": "class",
+        "name": "Perceptron",
+        "classdesc": "Perceptron to train and execute",
+        "see": [
+            "of"
+        ],
+        "examples": [
+            "const m =  Perceptron.of()"
+        ],
+        "longname": "Perceptron",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                138,
+                204
+            ],
+            "filename": "perceptron.js",
+            "lineno": 10,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000010",
+                "name": "Perceptron",
+                "type": "FunctionExpression"
+            },
+            "vars": {
+                "this.weights": null
+            }
+        },
+        "undocumented": true,
+        "name": "Perceptron",
+        "longname": "Perceptron",
+        "kind": "function",
+        "scope": "global",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                174,
+                202
+            ],
+            "filename": "perceptron.js",
+            "lineno": 11,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000016",
+                "name": "this.weights",
+                "type": "LogicalExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "weights",
+        "longname": "weights",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @static\n * @function of\n * @desc Creates a Matrix object and flattens the Matrix\n * @param val {array|function} An array of arrays\n * @returns {Matrix}\n * @example\n *\n * const m =  Perceptron.of()\n *\n */",
+        "meta": {
+            "filename": "perceptron.js",
+            "lineno": 14,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "static",
+        "kind": "function",
+        "name": "of",
+        "description": "Creates a Matrix object and flattens the Matrix",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "array",
+                        "function"
+                    ]
+                },
+                "description": "An array of arrays",
+                "name": "val"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Matrix"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const m =  Perceptron.of()"
+        ],
+        "longname": "Matrix.of"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                437,
+                623
+            ],
+            "filename": "perceptron.js",
+            "lineno": 26,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000024",
+                "name": "Perceptron.of",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "val"
+                ]
+            },
+            "vars": {
+                "this.weights": "Perceptron.of#weights"
+            }
+        },
+        "undocumented": true,
+        "name": "of",
+        "longname": "Perceptron.of",
+        "kind": "function",
+        "memberof": "Perceptron",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                554,
+                572
+            ],
+            "filename": "perceptron.js",
+            "lineno": 29,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000043",
+                "name": "this.weights",
+                "type": "Identifier",
+                "value": "val",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "weights",
+        "longname": "Perceptron.of#weights",
+        "kind": "member",
+        "memberof": "Perceptron.of",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                625,
+                665
+            ],
+            "filename": "perceptron.js",
+            "lineno": 35,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000055",
+                "name": "Perceptron.prototype.type",
+                "type": "Literal",
+                "value": "Perceptron",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "type",
+        "longname": "Perceptron#type",
+        "kind": "member",
+        "memberof": "Perceptron",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @function predict\n * @param row\n * @param weights\n * @returns {number}\n */",
+        "meta": {
+            "filename": "perceptron.js",
+            "lineno": 37,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {}
+        },
+        "kind": "function",
+        "name": "predict",
+        "params": [
+            {
+                "name": "row"
+            },
+            {
+                "name": "weights"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                }
+            }
+        ],
+        "longname": "predict",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                749,
+                939
+            ],
+            "filename": "perceptron.js",
+            "lineno": 43,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000063",
+                "name": "Perceptron.prototype.predict",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "row"
+                ]
+            },
+            "vars": {
+                "activation": "Perceptron#predict~activation",
+                "": null
+            }
+        },
+        "undocumented": true,
+        "name": "predict",
+        "longname": "Perceptron#predict",
+        "kind": "function",
+        "memberof": "Perceptron",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                803,
+                831
+            ],
+            "filename": "perceptron.js",
+            "lineno": 44,
+            "columnno": 6,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000073",
+                "name": "activation",
+                "type": "MemberExpression",
+                "value": "this.weights[0]"
+            }
+        },
+        "undocumented": true,
+        "name": "activation",
+        "longname": "Perceptron#predict~activation",
+        "kind": "member",
+        "memberof": "Perceptron#predict",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                862,
+                899
+            ],
+            "filename": "perceptron.js",
+            "lineno": 46,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000090",
+                "name": "activation",
+                "type": "BinaryExpression",
+                "funcscope": "<anonymous>",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "activation",
+        "longname": "<anonymous>~activation",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * @function train\n * @param train\n * @param lRate\n * @param nEpoch\n */",
+        "meta": {
+            "filename": "perceptron.js",
+            "lineno": 51,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {}
+        },
+        "kind": "function",
+        "name": "train",
+        "params": [
+            {
+                "name": "train"
+            },
+            {
+                "name": "lRate"
+            },
+            {
+                "name": "nEpoch"
+            }
+        ],
+        "longname": "train",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1017,
+                1476
+            ],
+            "filename": "perceptron.js",
+            "lineno": 57,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000109",
+                "name": "Perceptron.prototype.train",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "train",
+                    "lRate",
+                    "nEpoch"
+                ]
+            },
+            "vars": {
+                "this.weights": "Perceptron#train#weights",
+                "": null,
+                "i": "Perceptron#train~i"
+            }
+        },
+        "undocumented": true,
+        "name": "train",
+        "longname": "Perceptron#train",
+        "kind": "function",
+        "memberof": "Perceptron",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1082,
+                1150
+            ],
+            "filename": "perceptron.js",
+            "lineno": 58,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000121",
+                "name": "this.weights",
+                "type": "CallExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "weights",
+        "longname": "Perceptron#train#weights",
+        "kind": "member",
+        "memberof": "Perceptron#train",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1162,
+                1167
+            ],
+            "filename": "perceptron.js",
+            "lineno": 59,
+            "columnno": 11,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000145",
+                "name": "i",
+                "type": "Literal",
+                "value": 0
+            }
+        },
+        "undocumented": true,
+        "name": "i",
+        "longname": "Perceptron#train~i",
+        "kind": "member",
+        "memberof": "Perceptron#train",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1232,
+                1257
+            ],
+            "filename": "perceptron.js",
+            "lineno": 61,
+            "columnno": 12,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000164",
+                "name": "expected",
+                "type": "MemberExpression",
+                "value": "[0]"
+            }
+        },
+        "undocumented": true,
+        "name": "expected",
+        "longname": "<anonymous>~expected",
+        "kind": "constant",
+        "memberof": "<anonymous>",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1270,
+                1290
+            ],
+            "filename": "perceptron.js",
+            "lineno": 62,
+            "columnno": 12,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000175",
+                "name": "row",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "row",
+        "longname": "<anonymous>~row",
+        "kind": "constant",
+        "memberof": "<anonymous>",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1303,
+                1333
+            ],
+            "filename": "perceptron.js",
+            "lineno": 63,
+            "columnno": 12,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000185",
+                "name": "prediction",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "prediction",
+        "longname": "<anonymous>~prediction",
+        "kind": "constant",
+        "memberof": "<anonymous>",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1346,
+                1375
+            ],
+            "filename": "perceptron.js",
+            "lineno": 64,
+            "columnno": 12,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000193",
+                "name": "error",
+                "type": "BinaryExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "error",
+        "longname": "<anonymous>~error",
+        "kind": "constant",
+        "memberof": "<anonymous>",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1414,
+                1454
+            ],
+            "filename": "perceptron.js",
+            "lineno": 66,
+            "columnno": 8,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000208",
+                "name": "this.weights[undefined]",
+                "type": "BinaryExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "weights[undefined]",
+        "longname": "Perceptron#train#weights[undefined]",
+        "kind": "member",
+        "memberof": "Perceptron#train",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1478,
+                1503
+            ],
+            "filename": "perceptron.js",
+            "lineno": 72,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000221",
+                "name": "module.exports",
+                "type": "Identifier"
+            }
+        },
+        "undocumented": true,
+        "name": "exports",
+        "longname": "module.exports",
+        "kind": "member",
+        "memberof": "module",
+        "scope": "static"
+    },
+    {
         "kind": "package",
         "longname": "package:undefined",
         "files": [
-            "/Volumes/BigOne/github/funml/src/index.js"
+            "/Volumes/BigOne/github/funml/src/index.js",
+            "/Volumes/BigOne/github/funml/src/perceptron.js"
         ]
     }
 ]
