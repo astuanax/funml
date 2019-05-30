@@ -176,7 +176,7 @@
         "meta": {
             "range": [
                 114,
-                3460
+                3512
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 8,
@@ -332,7 +332,7 @@
         "scope": "instance"
     },
     {
-        "comment": "/**\n   * @member setActivationFunction\n   * @param func\n   */",
+        "comment": "/**\n* @function NeuralNetwork#setActivationFunction\n   * @param func\n   */",
         "meta": {
             "filename": "NeuralNetwork.js",
             "lineno": 26,
@@ -340,22 +340,23 @@
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
         },
-        "kind": "member",
+        "kind": "function",
         "name": "setActivationFunction",
         "params": [
             {
                 "name": "func"
             }
         ],
-        "longname": "setActivationFunction",
-        "scope": "global"
+        "memberof": "NeuralNetwork",
+        "longname": "NeuralNetwork#setActivationFunction",
+        "scope": "instance"
     },
     {
         "comment": "",
         "meta": {
             "range": [
-                731,
-                811
+                744,
+                824
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 30,
@@ -385,8 +386,8 @@
         "comment": "",
         "meta": {
             "range": [
-                776,
-                807
+                789,
+                820
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 31,
@@ -408,7 +409,7 @@
         "scope": "instance"
     },
     {
-        "comment": "/**\n   * @member setLearningRate\n   * @param learningRate\n   */",
+        "comment": "/**\n* @function NeuralNetwork#setLearningRate\n   * @param learningRate\n   */",
         "meta": {
             "filename": "NeuralNetwork.js",
             "lineno": 34,
@@ -416,22 +417,23 @@
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
         },
-        "kind": "member",
+        "kind": "function",
         "name": "setLearningRate",
         "params": [
             {
                 "name": "learningRate"
             }
         ],
-        "longname": "setLearningRate",
-        "scope": "global"
+        "memberof": "NeuralNetwork",
+        "longname": "NeuralNetwork#setLearningRate",
+        "scope": "instance"
     },
     {
         "comment": "",
         "meta": {
             "range": [
-                881,
-                961
+                907,
+                987
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 38,
@@ -461,8 +463,8 @@
         "comment": "",
         "meta": {
             "range": [
-                924,
-                957
+                950,
+                983
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 39,
@@ -484,7 +486,7 @@
         "scope": "instance"
     },
     {
-        "comment": "/**\n   * @member predict\n   * @param inputArray\n   * @returns {Array}\n   */",
+        "comment": "/**\n* @function NeuralNetwork#predict\n   * @param inputArray\n   * @returns {Array}\n   */",
         "meta": {
             "filename": "NeuralNetwork.js",
             "lineno": 42,
@@ -492,7 +494,7 @@
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
         },
-        "kind": "member",
+        "kind": "function",
         "name": "predict",
         "params": [
             {
@@ -508,15 +510,16 @@
                 }
             }
         ],
-        "longname": "predict",
-        "scope": "global"
+        "memberof": "NeuralNetwork",
+        "longname": "NeuralNetwork#predict",
+        "scope": "instance"
     },
     {
         "comment": "",
         "meta": {
             "range": [
-                1043,
-                1538
+                1082,
+                1577
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 47,
@@ -546,8 +549,8 @@
         "comment": "",
         "meta": {
             "range": [
-                1111,
-                1148
+                1150,
+                1187
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 49,
@@ -572,8 +575,8 @@
         "comment": "",
         "meta": {
             "range": [
-                1157,
-                1201
+                1196,
+                1240
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 50,
@@ -598,8 +601,8 @@
         "comment": "",
         "meta": {
             "range": [
-                1352,
-                1396
+                1391,
+                1435
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 56,
@@ -621,7 +624,7 @@
         "params": []
     },
     {
-        "comment": "/**\n   * @member train\n   * @param inputArray\n   * @param targetArray\n   */",
+        "comment": "/**\n* @function NeuralNetwork#train\n   * @param inputArray\n   * @param targetArray\n   */",
         "meta": {
             "filename": "NeuralNetwork.js",
             "lineno": 64,
@@ -629,7 +632,7 @@
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
         },
-        "kind": "member",
+        "kind": "function",
         "name": "train",
         "params": [
             {
@@ -639,15 +642,16 @@
                 "name": "targetArray"
             }
         ],
-        "longname": "train",
-        "scope": "global"
+        "memberof": "NeuralNetwork",
+        "longname": "NeuralNetwork#train",
+        "scope": "instance"
     },
     {
         "comment": "",
         "meta": {
             "range": [
-                1620,
-                3458
+                1672,
+                3510
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 69,
@@ -678,8 +682,8 @@
         "comment": "",
         "meta": {
             "range": [
-                1730,
-                1767
+                1782,
+                1819
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 71,
@@ -704,8 +708,8 @@
         "comment": "",
         "meta": {
             "range": [
-                1776,
-                1820
+                1828,
+                1872
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 72,
@@ -730,8 +734,8 @@
         "comment": "",
         "meta": {
             "range": [
-                1972,
-                2017
+                2024,
+                2069
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 79,
@@ -756,8 +760,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2141,
-                2180
+                2193,
+                2232
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 84,
@@ -782,8 +786,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2250,
-                2298
+                2302,
+                2350
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 88,
@@ -808,8 +812,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2381,
-                2444
+                2433,
+                2496
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 92,
@@ -834,8 +838,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2558,
-                2592
+                2610,
+                2644
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 97,
@@ -860,8 +864,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2601,
-                2648
+                2653,
+                2700
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 98,
@@ -886,8 +890,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2874,
-                2914
+                2926,
+                2966
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 106,
@@ -912,8 +916,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2923,
-                2968
+                2975,
+                3020
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 107,
@@ -938,8 +942,8 @@
         "comment": "",
         "meta": {
             "range": [
-                3011,
-                3078
+                3063,
+                3130
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 110,
@@ -964,8 +968,8 @@
         "comment": "",
         "meta": {
             "range": [
-                3215,
-                3249
+                3267,
+                3301
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 115,
@@ -990,8 +994,8 @@
         "comment": "",
         "meta": {
             "range": [
-                3258,
-                3310
+                3310,
+                3362
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 116,
@@ -1016,8 +1020,8 @@
         "comment": "",
         "meta": {
             "range": [
-                3462,
-                3490
+                3514,
+                3542
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 124,
@@ -1110,7 +1114,7 @@
         "scope": "global"
     },
     {
-        "comment": "/**\n * @memberOf Perceptron\n * @static\n * @function of\n * @desc Creates a Perceptron object\n * @param weights {array} Weigths for predicting\n * @returns {Perceptron}\n * @example\n *\n * const m =  Perceptron.of()\n * const train  = [...]\n * m.train(train, 0.1, 10000)\n *\n */",
+        "comment": "/**\n * @memberOf Perceptron\n * @static\n * @function Perceptron.of\n * @desc Creates a Perceptron object\n * @param weights {array} Weights for predicting\n * @returns {Perceptron}\n * @example\n *\n * const weights = [0.123456, 0.458789, 0.9987454]\n * const m =  Perceptron.of(weights)\n *\n */",
         "meta": {
             "filename": "Perceptron.js",
             "lineno": 14,
@@ -1130,7 +1134,7 @@
                         "array"
                     ]
                 },
-                "description": "Weigths for predicting",
+                "description": "Weights for predicting",
                 "name": "weights"
             }
         ],
@@ -1144,7 +1148,7 @@
             }
         ],
         "examples": [
-            "const m =  Perceptron.of()\nconst train  = [...]\nm.train(train, 0.1, 10000)"
+            "const weights = [0.123456, 0.458789, 0.9987454]\nconst m =  Perceptron.of(weights)"
         ],
         "longname": "Perceptron.of"
     },
@@ -1152,11 +1156,11 @@
         "comment": "",
         "meta": {
             "range": [
-                526,
-                712
+                541,
+                727
             ],
             "filename": "Perceptron.js",
-            "lineno": 28,
+            "lineno": 27,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1182,11 +1186,11 @@
         "comment": "",
         "meta": {
             "range": [
-                643,
-                661
+                658,
+                676
             ],
             "filename": "Perceptron.js",
-            "lineno": 31,
+            "lineno": 30,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1208,11 +1212,11 @@
         "comment": "/**\n * @memberOf Perceptron\n * @type {string}\n */",
         "meta": {
             "range": [
-                764,
-                804
+                779,
+                819
             ],
             "filename": "Perceptron.js",
-            "lineno": 41,
+            "lineno": 40,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1235,10 +1239,10 @@
         "scope": "instance"
     },
     {
-        "comment": "/**\n * @memberOf Perceptron\n * @function Perceptron.predict\n * @param row {Array} Array of values to predict\n * @returns {Boolean}\n */",
+        "comment": "/**\n * @memberOf Perceptron\n * @function Perceptron#predict\n * @param row {Array} Array of values to predict\n * @returns {Boolean}\n * @example\n *\n * const m =  Perceptron.of()\n * const train  = [...] // dataset: [[0,1,2], [1,2,3]]\n * m.train(train, 0.1, 10000)\n * m.predict([1,2,1]) // returns 1 or 0\n */",
         "meta": {
             "filename": "Perceptron.js",
-            "lineno": 43,
+            "lineno": 42,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
@@ -1266,18 +1270,21 @@
                 }
             }
         ],
-        "longname": "Perceptron.predict",
-        "scope": "static"
+        "examples": [
+            "const m =  Perceptron.of()\nconst train  = [...] // dataset: [[0,1,2], [1,2,3]]\nm.train(train, 0.1, 10000)\nm.predict([1,2,1]) // returns 1 or 0"
+        ],
+        "longname": "Perceptron#predict",
+        "scope": "instance"
     },
     {
         "comment": "",
         "meta": {
             "range": [
-                941,
-                1131
+                1126,
+                1316
             ],
             "filename": "Perceptron.js",
-            "lineno": 49,
+            "lineno": 54,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1304,11 +1311,11 @@
         "comment": "",
         "meta": {
             "range": [
-                995,
-                1023
+                1180,
+                1208
             ],
             "filename": "Perceptron.js",
-            "lineno": 50,
+            "lineno": 55,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1330,11 +1337,11 @@
         "comment": "",
         "meta": {
             "range": [
-                1054,
-                1091
+                1239,
+                1276
             ],
             "filename": "Perceptron.js",
-            "lineno": 52,
+            "lineno": 57,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1354,14 +1361,15 @@
         "scope": "inner"
     },
     {
-        "comment": "/**\n * @function train\n * @param train {Array} Dataset to train the preceptron\n * @param lRate {Number} Set the larning rate of the perceptron\n * @param nEpoch {Number} Set thenumber of iterations to train the perceptron\n */",
+        "comment": "/**\n * @memberOf Perceptron\n * @function Perceptron#train\n * @param train {Array} Dataset to train the preceptron\n * @param lRate {Number} Set the learning rate of the perceptron\n * @param nEpoch {Number} Set the number of iterations to train the perceptron\n * @example\n *\n * const m =  Perceptron.of()\n * const train  = [...] // dataset: [[0,1,2], [1,2,3]]\n * m.train(train, 0.1, 10000)\n * m.weights = [0.213131, -0.45464, 0.789797]\n *\n */",
         "meta": {
             "filename": "Perceptron.js",
-            "lineno": 57,
+            "lineno": 62,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
         },
+        "memberof": "Perceptron",
         "kind": "function",
         "name": "train",
         "params": [
@@ -1380,7 +1388,7 @@
                         "Number"
                     ]
                 },
-                "description": "Set the larning rate of the perceptron",
+                "description": "Set the learning rate of the perceptron",
                 "name": "lRate"
             },
             {
@@ -1389,22 +1397,25 @@
                         "Number"
                     ]
                 },
-                "description": "Set thenumber of iterations to train the perceptron",
+                "description": "Set the number of iterations to train the perceptron",
                 "name": "nEpoch"
             }
         ],
-        "longname": "train",
-        "scope": "global"
+        "examples": [
+            "const m =  Perceptron.of()\nconst train  = [...] // dataset: [[0,1,2], [1,2,3]]\nm.train(train, 0.1, 10000)\nm.weights = [0.213131, -0.45464, 0.789797]"
+        ],
+        "longname": "Perceptron#train",
+        "scope": "instance"
     },
     {
         "comment": "",
         "meta": {
             "range": [
-                1358,
-                1817
+                1759,
+                2218
             ],
             "filename": "Perceptron.js",
-            "lineno": 63,
+            "lineno": 76,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1434,11 +1445,11 @@
         "comment": "",
         "meta": {
             "range": [
-                1423,
-                1491
+                1824,
+                1892
             ],
             "filename": "Perceptron.js",
-            "lineno": 64,
+            "lineno": 77,
             "columnno": 2,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1460,11 +1471,11 @@
         "comment": "",
         "meta": {
             "range": [
-                1503,
-                1508
+                1904,
+                1909
             ],
             "filename": "Perceptron.js",
-            "lineno": 65,
+            "lineno": 78,
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1486,11 +1497,11 @@
         "comment": "",
         "meta": {
             "range": [
-                1573,
-                1598
+                1974,
+                1999
             ],
             "filename": "Perceptron.js",
-            "lineno": 67,
+            "lineno": 80,
             "columnno": 12,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1512,11 +1523,11 @@
         "comment": "",
         "meta": {
             "range": [
-                1611,
-                1631
+                2012,
+                2032
             ],
             "filename": "Perceptron.js",
-            "lineno": 68,
+            "lineno": 81,
             "columnno": 12,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1538,11 +1549,11 @@
         "comment": "",
         "meta": {
             "range": [
-                1644,
-                1674
+                2045,
+                2075
             ],
             "filename": "Perceptron.js",
-            "lineno": 69,
+            "lineno": 82,
             "columnno": 12,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1564,11 +1575,11 @@
         "comment": "",
         "meta": {
             "range": [
-                1687,
-                1716
+                2088,
+                2117
             ],
             "filename": "Perceptron.js",
-            "lineno": 70,
+            "lineno": 83,
             "columnno": 12,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1590,11 +1601,11 @@
         "comment": "",
         "meta": {
             "range": [
-                1755,
-                1795
+                2156,
+                2196
             ],
             "filename": "Perceptron.js",
-            "lineno": 72,
+            "lineno": 85,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
@@ -1616,11 +1627,11 @@
         "comment": "",
         "meta": {
             "range": [
-                1819,
-                1844
+                2220,
+                2245
             ],
             "filename": "Perceptron.js",
-            "lineno": 78,
+            "lineno": 91,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {

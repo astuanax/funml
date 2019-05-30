@@ -24,7 +24,7 @@ class NeuralNetwork {
   }
 
   /**
-   * @member setActivationFunction
+* @function NeuralNetwork#setActivationFunction
    * @param func
    */
   setActivationFunction (func = sigmoid) {
@@ -32,7 +32,7 @@ class NeuralNetwork {
   }
 
   /**
-   * @member setLearningRate
+* @function NeuralNetwork#setLearningRate
    * @param learningRate
    */
   setLearningRate (learningRate = 0.1) {
@@ -40,7 +40,7 @@ class NeuralNetwork {
   }
 
   /**
-   * @member predict
+* @function NeuralNetwork#predict
    * @param inputArray
    * @returns {Array}
    */
@@ -62,7 +62,7 @@ class NeuralNetwork {
   }
 
   /**
-   * @member train
+* @function NeuralNetwork#train
    * @param inputArray
    * @param targetArray
    */

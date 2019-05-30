@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ActivationFunction.html">ActivationFunction</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="NeuralNetwork.html">NeuralNetwork</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Perceptron.html">Perceptron</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#.of">of</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#.predict">predict</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#setActivationFunction">setActivationFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#setLearningRate">setLearningRate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#sigmoid">sigmoid</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#tanh">tanh</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#train">train</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ActivationFunction.html">ActivationFunction</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="NeuralNetwork.html">NeuralNetwork</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setActivationFunction">setActivationFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setLearningRate">setLearningRate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#train">train</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Perceptron.html">Perceptron</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#.of">of</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#train">train</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#sigmoid">sigmoid</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#tanh">tanh</a></span></li>
 </nav>
 
 <div id="main">
@@ -204,7 +204,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Perceptron.js.html">Perceptron.js</a>, <a href="Perceptron.js.html#line41">line 41</a>
+        <a href="Perceptron.js.html">Perceptron.js</a>, <a href="Perceptron.js.html#line40">line 40</a>
     </li></ul></dd>
     
 
@@ -349,7 +349,7 @@
             
 
             <td class="description last">
-                Weigths for predicting
+                Weights for predicting
                 
             </td>
         </tr>
@@ -397,9 +397,8 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>const m =  Perceptron.of()
-const train  = [...]
-m.train(train, 0.1, 10000)</code></pre>
+    <pre class="prettyprint"><code>const weights = [0.123456, 0.458789, 0.9987454]
+const m =  Perceptron.of(weights)</code></pre>
 
 </div>
 
@@ -410,7 +409,7 @@ m.train(train, 0.1, 10000)</code></pre>
 
     
 
-    <h4 class="name" id=".predict"><span class="type-signature">(static) </span>predict<span class="signature">(row)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    <h4 class="name" id="predict"><span class="type-signature"></span>predict<span class="signature">(row)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
 
     
 
@@ -449,7 +448,7 @@ m.train(train, 0.1, 10000)</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Perceptron.js.html">Perceptron.js</a>, <a href="Perceptron.js.html#line43">line 43</a>
+        <a href="Perceptron.js.html">Perceptron.js</a>, <a href="Perceptron.js.html#line42">line 42</a>
     </li></ul></dd>
     
 
@@ -555,6 +554,209 @@ m.train(train, 0.1, 10000)</code></pre>
 
 
 
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const m =  Perceptron.of()
+const train  = [...] // dataset: [[0,1,2], [1,2,3]]
+m.train(train, 0.1, 10000)
+m.predict([1,2,1]) // returns 1 or 0</code></pre>
+
+</div>
+
+</div>
+        
+            
+<div class="section-method">
+
+    
+
+    <h4 class="name" id="train"><span class="type-signature"></span>train<span class="signature">(train, lRate, nEpoch)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Perceptron.js.html">Perceptron.js</a>, <a href="Perceptron.js.html#line62">line 62</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>train</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Array</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                Dataset to train the preceptron
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lRate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Number</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                Set the learning rate of the perceptron
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>nEpoch</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Number</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                Set the number of iterations to train the perceptron
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const m =  Perceptron.of()
+const train  = [...] // dataset: [[0,1,2], [1,2,3]]
+m.train(train, 0.1, 10000)
+m.weights = [0.213131, -0.45464, 0.789797]</code></pre>
+
+</div>
+
 </div>
         
     
@@ -574,7 +776,7 @@ m.train(train, 0.1, 10000)</code></pre>
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed May 29 2019 21:01:29 GMT+0200 (Central European Summer Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu May 30 2019 21:14:24 GMT+0200 (Central European Summer Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

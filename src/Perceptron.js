@@ -14,15 +14,14 @@ let Perceptron = function (weights) {
 /**
  * @memberOf Perceptron
  * @static
- * @function of
+ * @function Perceptron.of
  * @desc Creates a Perceptron object
- * @param weights {array} Weigths for predicting
+ * @param weights {array} Weights for predicting
  * @returns {Perceptron}
  * @example
  *
- * const m =  Perceptron.of()
- * const train  = [...]
- * m.train(train, 0.1, 10000)
+ * const weights = [0.123456, 0.458789, 0.9987454]
+ * const m =  Perceptron.of(weights)
  *
  */
 Perceptron.of = function (val) {
@@ -42,9 +41,15 @@ Perceptron.prototype.type = 'Perceptron'
 
 /**
  * @memberOf Perceptron
- * @function Perceptron.predict
+ * @function Perceptron#predict
  * @param row {Array} Array of values to predict
  * @returns {Boolean}
+ * @example
+ *
+ * const m =  Perceptron.of()
+ * const train  = [...] // dataset: [[0,1,2], [1,2,3]]
+ * m.train(train, 0.1, 10000)
+ * m.predict([1,2,1]) // returns 1 or 0
  */
 Perceptron.prototype.predict = function (row) {
   var activation = this.weights[0]
@@ -55,10 +60,18 @@ Perceptron.prototype.predict = function (row) {
 }
 
 /**
- * @function train
+ * @memberOf Perceptron
+ * @function Perceptron#train
  * @param train {Array} Dataset to train the preceptron
- * @param lRate {Number} Set the larning rate of the perceptron
- * @param nEpoch {Number} Set thenumber of iterations to train the perceptron
+ * @param lRate {Number} Set the learning rate of the perceptron
+ * @param nEpoch {Number} Set the number of iterations to train the perceptron
+ * @example
+ *
+ * const m =  Perceptron.of()
+ * const train  = [...] // dataset: [[0,1,2], [1,2,3]]
+ * m.train(train, 0.1, 10000)
+ * m.weights = [0.213131, -0.45464, 0.789797]
+ *
  */
 Perceptron.prototype.train = function (train, lRate, nEpoch) {
   this.weights = Array.apply(null, Array(train[0].length)).map(x => 0)
