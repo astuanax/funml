@@ -202,7 +202,7 @@
         "meta": {
             "range": [
                 202,
-                757
+                718
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 10,
@@ -228,7 +228,7 @@
         "meta": {
             "range": [
                 226,
-                755
+                716
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 11,
@@ -257,17 +257,42 @@
         "comment": "",
         "meta": {
             "range": [
-                324,
-                386
+                330,
+                360
             ],
             "filename": "NeuralNetwork.js",
             "lineno": 14,
-            "columnno": 4,
+            "columnno": 10,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
                 "id": "astnode100000057",
+                "name": "f",
+                "type": "ArrowFunctionExpression"
+            }
+        },
+        "undocumented": true,
+        "name": "f",
+        "longname": "<anonymous>~f",
+        "kind": "function",
+        "memberof": "<anonymous>",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                365,
+                433
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 15,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000070",
                 "name": "this.weightsIh",
-                "type": "NewExpression",
+                "type": "CallExpression",
                 "value": "",
                 "paramnames": []
             }
@@ -283,17 +308,17 @@
         "comment": "",
         "meta": {
             "range": [
-                391,
-                454
+                438,
+                507
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 15,
+            "lineno": 16,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000070",
+                "id": "astnode100000086",
                 "name": "this.weightsHo",
-                "type": "NewExpression",
+                "type": "CallExpression",
                 "value": "",
                 "paramnames": []
             }
@@ -309,17 +334,17 @@
         "comment": "",
         "meta": {
             "range": [
-                516,
-                560
+                513,
+                563
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 19,
+            "lineno": 18,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000097",
+                "id": "astnode100000102",
                 "name": "this.biasH",
-                "type": "NewExpression",
+                "type": "CallExpression",
                 "value": "",
                 "paramnames": []
             }
@@ -335,17 +360,17 @@
         "comment": "",
         "meta": {
             "range": [
-                565,
-                609
+                568,
+                618
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 20,
+            "lineno": 19,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000108",
+                "id": "astnode100000116",
                 "name": "this.biasO",
-                "type": "NewExpression",
+                "type": "CallExpression",
                 "value": "",
                 "paramnames": []
             }
@@ -361,15 +386,15 @@
         "comment": "",
         "meta": {
             "range": [
-                724,
-                751
+                685,
+                712
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 27,
+            "lineno": 24,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000143",
+                "id": "astnode100000140",
                 "name": "this.type",
                 "type": "Literal",
                 "value": "NeuralNetwork",
@@ -387,7 +412,7 @@
         "comment": "/**\n * @memberOf NeuralNetwork\n * @function NeuralNetwork#setActivationFunction\n * @param {Function} func\n */",
         "meta": {
             "filename": "NeuralNetwork.js",
-            "lineno": 30,
+            "lineno": 27,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
@@ -412,15 +437,15 @@
         "comment": "",
         "meta": {
             "range": [
-                868,
-                978
+                829,
+                939
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 35,
+            "lineno": 32,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000149",
+                "id": "astnode100000146",
                 "name": "NeuralNetwork.prototype.setActivationFunction",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -442,15 +467,15 @@
         "comment": "",
         "meta": {
             "range": [
-                946,
-                976
+                907,
+                937
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 36,
+            "lineno": 33,
             "columnno": 2,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000161",
+                "id": "astnode100000158",
                 "name": "this.activationFunction",
                 "type": "Identifier",
                 "value": "func",
@@ -468,7 +493,7 @@
         "comment": "/**\n * @memberOf NeuralNetwork\n * @function NeuralNetwork#setLearningRate\n * @param {Number} learningRate\n */",
         "meta": {
             "filename": "NeuralNetwork.js",
-            "lineno": 39,
+            "lineno": 36,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
@@ -493,15 +518,15 @@
         "comment": "",
         "meta": {
             "range": [
-                1090,
-                1200
+                1051,
+                1161
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 44,
+            "lineno": 41,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000167",
+                "id": "astnode100000164",
                 "name": "NeuralNetwork.prototype.setLearningRate",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -523,15 +548,15 @@
         "comment": "",
         "meta": {
             "range": [
-                1166,
-                1198
+                1127,
+                1159
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 45,
+            "lineno": 42,
             "columnno": 2,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000179",
+                "id": "astnode100000176",
                 "name": "this.learningRate",
                 "type": "Identifier",
                 "value": "learningRate",
@@ -549,7 +574,7 @@
         "comment": "/**\n * @memberOf NeuralNetwork\n * @function NeuralNetwork#predict\n * @param {Array} inputArray\n * @returns {Array}\n */",
         "meta": {
             "filename": "NeuralNetwork.js",
-            "lineno": 48,
+            "lineno": 45,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
@@ -583,15 +608,15 @@
         "comment": "",
         "meta": {
             "range": [
-                1321,
-                1819
+                1282,
+                2145
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 54,
+            "lineno": 51,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000185",
+                "id": "astnode100000182",
                 "name": "NeuralNetwork.prototype.predict",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -601,6 +626,7 @@
             "vars": {
                 "inputs": "NeuralNetwork#predict~inputs",
                 "hidden": "NeuralNetwork#predict~hidden",
+                "": null,
                 "output": "NeuralNetwork#predict~output"
             }
         },
@@ -615,15 +641,15 @@
         "comment": "",
         "meta": {
             "range": [
-                1420,
-                1457
+                1381,
+                1418
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 56,
+            "lineno": 53,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000195",
+                "id": "astnode100000192",
                 "name": "inputs",
                 "type": "CallExpression",
                 "value": ""
@@ -641,15 +667,15 @@
         "comment": "",
         "meta": {
             "range": [
-                1464,
-                1507
+                1519,
+                1562
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 57,
+            "lineno": 56,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000203",
+                "id": "astnode100000200",
                 "name": "hidden",
                 "type": "CallExpression",
                 "value": ""
@@ -667,15 +693,69 @@
         "comment": "",
         "meta": {
             "range": [
-                1646,
-                1689
+                1608,
+                1650
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 63,
+            "lineno": 58,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000211",
+                "name": "hidden",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#predict",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "hidden",
+        "longname": "NeuralNetwork#predict~hidden",
+        "kind": "member",
+        "memberof": "NeuralNetwork#predict",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1679,
+                1744
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 60,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000225",
+                "name": "hidden",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#predict",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "hidden",
+        "longname": "NeuralNetwork#predict~hidden",
+        "kind": "member",
+        "memberof": "NeuralNetwork#predict",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1837,
+                1880
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 64,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000232",
+                "id": "astnode100000243",
                 "name": "output",
                 "type": "CallExpression",
                 "value": ""
@@ -690,10 +770,64 @@
         "params": []
     },
     {
+        "comment": "",
+        "meta": {
+            "range": [
+                1926,
+                1968
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 66,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000254",
+                "name": "output",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#predict",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "output",
+        "longname": "NeuralNetwork#predict~output",
+        "kind": "member",
+        "memberof": "NeuralNetwork#predict",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1971,
+                2036
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 67,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000268",
+                "name": "output",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#predict",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "output",
+        "longname": "NeuralNetwork#predict~output",
+        "kind": "member",
+        "memberof": "NeuralNetwork#predict",
+        "scope": "inner"
+    },
+    {
         "comment": "/**\n * @memberOf NeuralNetwork\n * @function NeuralNetwork#train\n * @param {Array} inputArray\n * @param {Array} targetArray\n */",
         "meta": {
             "filename": "NeuralNetwork.js",
-            "lineno": 71,
+            "lineno": 73,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {}
@@ -726,15 +860,15 @@
         "comment": "",
         "meta": {
             "range": [
-                1948,
-                3693
+                2274,
+                4642
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 77,
+            "lineno": 79,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000266",
+                "id": "astnode100000291",
                 "name": "NeuralNetwork.prototype.train",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -745,17 +879,22 @@
             "vars": {
                 "inputs": "NeuralNetwork#train~inputs",
                 "hidden": "NeuralNetwork#train~hidden",
+                "": null,
                 "outputs": "NeuralNetwork#train~outputs",
                 "targets": "NeuralNetwork#train~targets",
                 "outputErrors": "NeuralNetwork#train~outputErrors",
                 "gradients": "NeuralNetwork#train~gradients",
                 "hiddenT": "NeuralNetwork#train~hiddenT",
                 "weightHoDeltas": "NeuralNetwork#train~weightHoDeltas",
+                "this.weightsHo": "NeuralNetwork#weightsHo",
+                "this.biasO": "NeuralNetwork#biasO",
                 "whoT": "NeuralNetwork#train~whoT",
                 "hiddenErrors": "NeuralNetwork#train~hiddenErrors",
                 "hiddenGradient": "NeuralNetwork#train~hiddenGradient",
                 "inputsT": "NeuralNetwork#train~inputsT",
-                "weightIhDeltas": "NeuralNetwork#train~weightIhDeltas"
+                "weightIhDeltas": "NeuralNetwork#train~weightIhDeltas",
+                "this.weightsIh": "NeuralNetwork#weightsIh",
+                "this.biasH": "NeuralNetwork#biasH"
             }
         },
         "undocumented": true,
@@ -769,15 +908,15 @@
         "comment": "",
         "meta": {
             "range": [
-                2058,
-                2095
+                2430,
+                2467
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 79,
+            "lineno": 82,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000277",
+                "id": "astnode100000302",
                 "name": "inputs",
                 "type": "CallExpression",
                 "value": ""
@@ -795,15 +934,15 @@
         "comment": "",
         "meta": {
             "range": [
-                2102,
-                2145
+                2474,
+                2517
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 80,
+            "lineno": 83,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000285",
+                "id": "astnode100000310",
                 "name": "hidden",
                 "type": "CallExpression",
                 "value": ""
@@ -821,15 +960,69 @@
         "comment": "",
         "meta": {
             "range": [
-                2285,
-                2329
+                2588,
+                2630
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 87,
+            "lineno": 88,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000321",
+                "name": "hidden",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#train",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "hidden",
+        "longname": "NeuralNetwork#train~hidden",
+        "kind": "member",
+        "memberof": "NeuralNetwork#train",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2659,
+                2724
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 90,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000335",
+                "name": "hidden",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#train",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "hidden",
+        "longname": "NeuralNetwork#train~hidden",
+        "kind": "member",
+        "memberof": "NeuralNetwork#train",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2769,
+                2813
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 93,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000314",
+                "id": "astnode100000353",
                 "name": "outputs",
                 "type": "CallExpression",
                 "value": ""
@@ -847,15 +1040,69 @@
         "comment": "",
         "meta": {
             "range": [
-                2443,
-                2482
+                2816,
+                2860
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 92,
+            "lineno": 94,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000364",
+                "name": "outputs",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#train",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "outputs",
+        "longname": "NeuralNetwork#train~outputs",
+        "kind": "member",
+        "memberof": "NeuralNetwork#train",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2863,
+                2930
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 95,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000378",
+                "name": "outputs",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#train",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "outputs",
+        "longname": "NeuralNetwork#train~outputs",
+        "kind": "member",
+        "memberof": "NeuralNetwork#train",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2974,
+                3013
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 98,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000343",
+                "id": "astnode100000396",
                 "name": "targets",
                 "type": "CallExpression",
                 "value": ""
@@ -873,15 +1120,15 @@
         "comment": "",
         "meta": {
             "range": [
-                2546,
-                2594
+                3077,
+                3128
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 96,
+            "lineno": 102,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000351",
+                "id": "astnode100000404",
                 "name": "outputErrors",
                 "type": "CallExpression",
                 "value": ""
@@ -899,15 +1146,15 @@
         "comment": "",
         "meta": {
             "range": [
-                2671,
-                2733
+                3205,
+                3275
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 100,
+            "lineno": 106,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000360",
+                "id": "astnode100000416",
                 "name": "gradients",
                 "type": "CallExpression",
                 "value": ""
@@ -925,15 +1172,69 @@
         "comment": "",
         "meta": {
             "range": [
-                2838,
-                2872
+                3278,
+                3322
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 105,
+            "lineno": 107,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000434",
+                "name": "gradients",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#train",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "gradients",
+        "longname": "NeuralNetwork#train~gradients",
+        "kind": "member",
+        "memberof": "NeuralNetwork#train",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3325,
+                3374
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 108,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000442",
+                "name": "gradients",
+                "type": "CallExpression",
+                "funcscope": "NeuralNetwork#train",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "gradients",
+        "longname": "NeuralNetwork#train~gradients",
+        "kind": "member",
+        "memberof": "NeuralNetwork#train",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3404,
+                3438
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 111,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000387",
+                "id": "astnode100000452",
                 "name": "hiddenT",
                 "type": "CallExpression",
                 "value": ""
@@ -951,15 +1252,15 @@
         "comment": "",
         "meta": {
             "range": [
-                2879,
-                2926
+                3445,
+                3492
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 106,
+            "lineno": 112,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000395",
+                "id": "astnode100000460",
                 "name": "weightHoDeltas",
                 "type": "CallExpression",
                 "value": ""
@@ -977,15 +1278,67 @@
         "comment": "",
         "meta": {
             "range": [
-                3138,
-                3177
+                3530,
+                3592
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 114,
+            "lineno": 115,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000469",
+                "name": "this.weightsHo",
+                "type": "CallExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "weightsHo",
+        "longname": "NeuralNetwork#weightsHo",
+        "kind": "member",
+        "memberof": "NeuralNetwork",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3704,
+                3753
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 119,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000494",
+                "name": "this.biasO",
+                "type": "CallExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "biasO",
+        "longname": "NeuralNetwork#biasO",
+        "kind": "member",
+        "memberof": "NeuralNetwork",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3800,
+                3839
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 122,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000420",
+                "id": "astnode100000510",
                 "name": "whoT",
                 "type": "CallExpression",
                 "value": ""
@@ -1003,15 +1356,15 @@
         "comment": "",
         "meta": {
             "range": [
-                3184,
-                3229
+                3874,
+                3919
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 115,
+            "lineno": 124,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000430",
+                "id": "astnode100000527",
                 "name": "hiddenErrors",
                 "type": "CallExpression",
                 "value": ""
@@ -1029,15 +1382,15 @@
         "comment": "",
         "meta": {
             "range": [
-                3268,
-                3334
+                4010,
+                4161
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 118,
+            "lineno": 128,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000439",
+                "id": "astnode100000545",
                 "name": "hiddenGradient",
                 "type": "CallExpression",
                 "value": ""
@@ -1055,15 +1408,15 @@
         "comment": "",
         "meta": {
             "range": [
-                3462,
-                3496
+                4260,
+                4294
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 123,
+            "lineno": 135,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000466",
+                "id": "astnode100000586",
                 "name": "inputsT",
                 "type": "CallExpression",
                 "value": ""
@@ -1081,15 +1434,15 @@
         "comment": "",
         "meta": {
             "range": [
-                3503,
-                3555
+                4344,
+                4396
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 124,
+            "lineno": 138,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000474",
+                "id": "astnode100000603",
                 "name": "weightIhDeltas",
                 "type": "CallExpression",
                 "value": ""
@@ -1107,15 +1460,67 @@
         "comment": "",
         "meta": {
             "range": [
-                3695,
-                3723
+                4456,
+                4518
             ],
             "filename": "NeuralNetwork.js",
-            "lineno": 131,
+            "lineno": 141,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000621",
+                "name": "this.weightsIh",
+                "type": "CallExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "weightsIh",
+        "longname": "NeuralNetwork#weightsIh",
+        "kind": "member",
+        "memberof": "NeuralNetwork",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4586,
+                4640
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 143,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funml/src",
+            "code": {
+                "id": "astnode100000637",
+                "name": "this.biasH",
+                "type": "CallExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "biasH",
+        "longname": "NeuralNetwork#biasH",
+        "kind": "member",
+        "memberof": "NeuralNetwork",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4644,
+                4672
+            ],
+            "filename": "NeuralNetwork.js",
+            "lineno": 146,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000498",
+                "id": "astnode100000652",
                 "name": "module.exports",
                 "type": "Identifier"
             }
@@ -1160,7 +1565,7 @@
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000503",
+                "id": "astnode100000657",
                 "name": "Perceptron",
                 "type": "FunctionExpression"
             },
@@ -1187,7 +1592,7 @@
             "columnno": 2,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000509",
+                "id": "astnode100000663",
                 "name": "this.weights",
                 "type": "LogicalExpression",
                 "value": "",
@@ -1251,7 +1656,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000517",
+                "id": "astnode100000671",
                 "name": "Perceptron.of",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1281,7 +1686,7 @@
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000536",
+                "id": "astnode100000690",
                 "name": "this.weights",
                 "type": "Identifier",
                 "value": "val",
@@ -1307,7 +1712,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000548",
+                "id": "astnode100000702",
                 "name": "Perceptron.prototype.type",
                 "type": "Literal",
                 "value": "Perceptron",
@@ -1375,7 +1780,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000556",
+                "id": "astnode100000710",
                 "name": "Perceptron.prototype.predict",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1406,7 +1811,7 @@
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000566",
+                "id": "astnode100000720",
                 "name": "activation",
                 "type": "MemberExpression",
                 "value": "this.weights[0]"
@@ -1432,7 +1837,7 @@
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000583",
+                "id": "astnode100000737",
                 "name": "activation",
                 "type": "BinaryExpression",
                 "funcscope": "<anonymous>",
@@ -1506,7 +1911,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000602",
+                "id": "astnode100000756",
                 "name": "Perceptron.prototype.train",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1540,7 +1945,7 @@
             "columnno": 2,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000614",
+                "id": "astnode100000768",
                 "name": "this.weights",
                 "type": "CallExpression",
                 "value": "",
@@ -1566,7 +1971,7 @@
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000638",
+                "id": "astnode100000792",
                 "name": "i",
                 "type": "Literal",
                 "value": 0
@@ -1592,7 +1997,7 @@
             "columnno": 12,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000657",
+                "id": "astnode100000811",
                 "name": "expected",
                 "type": "MemberExpression",
                 "value": "[0]"
@@ -1618,7 +2023,7 @@
             "columnno": 12,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000668",
+                "id": "astnode100000822",
                 "name": "row",
                 "type": "CallExpression",
                 "value": ""
@@ -1644,7 +2049,7 @@
             "columnno": 12,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000678",
+                "id": "astnode100000832",
                 "name": "prediction",
                 "type": "CallExpression",
                 "value": ""
@@ -1670,7 +2075,7 @@
             "columnno": 12,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000686",
+                "id": "astnode100000840",
                 "name": "error",
                 "type": "BinaryExpression",
                 "value": ""
@@ -1696,7 +2101,7 @@
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000701",
+                "id": "astnode100000855",
                 "name": "this.weights[undefined]",
                 "type": "BinaryExpression",
                 "value": "",
@@ -1722,7 +2127,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000714",
+                "id": "astnode100000868",
                 "name": "module.exports",
                 "type": "Identifier"
             }
@@ -1746,7 +2151,7 @@
             "columnno": 9,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000719",
+                "id": "astnode100000873",
                 "name": "exports.Perceptron",
                 "type": "Identifier"
             }
@@ -1769,7 +2174,7 @@
             "columnno": 9,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000724",
+                "id": "astnode100000878",
                 "name": "exports.NeuralNetwork",
                 "type": "Identifier"
             }
@@ -1792,7 +2197,7 @@
             "columnno": 9,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000729",
+                "id": "astnode100000883",
                 "name": "exports.ActivationFunction",
                 "type": "Identifier"
             }
@@ -1815,7 +2220,7 @@
             "columnno": 9,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000734",
+                "id": "astnode100000888",
                 "name": "exports.sigmoid",
                 "type": "Identifier"
             }
@@ -1838,7 +2243,7 @@
             "columnno": 9,
             "path": "/Volumes/BigOne/github/funml/src",
             "code": {
-                "id": "astnode100000739",
+                "id": "astnode100000893",
                 "name": "exports.tanh",
                 "type": "Identifier"
             }
@@ -1889,7 +2294,7 @@
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src/util",
             "code": {
-                "id": "astnode100000750",
+                "id": "astnode100000904",
                 "name": "sigmoid",
                 "type": "NewExpression",
                 "value": ""
@@ -1914,7 +2319,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src/util",
             "code": {
-                "id": "astnode100000773",
+                "id": "astnode100000927",
                 "name": "module.exports",
                 "type": "Identifier"
             }
@@ -1966,7 +2371,7 @@
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funml/src/util",
             "code": {
-                "id": "astnode100000782",
+                "id": "astnode100000936",
                 "name": "tanh",
                 "type": "NewExpression",
                 "value": ""
@@ -1991,7 +2396,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funml/src/util",
             "code": {
-                "id": "astnode100000800",
+                "id": "astnode100000954",
                 "name": "module.exports",
                 "type": "Identifier"
             }

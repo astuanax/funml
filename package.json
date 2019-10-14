@@ -72,7 +72,7 @@
     "instrument": false
   },
   "dependencies": {
-    "@astuanax/funmatrix": "^1.0.2",
+    "@astuanax/funmatrix": "github:astuanax/funmatrix",
     "fun.js": "^1.0.5"
   }
 }

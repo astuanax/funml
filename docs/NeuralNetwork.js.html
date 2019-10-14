@@ -52,15 +52,12 @@ class NeuralNetwork {
   constructor (...values) {
     [this.inputNodes, this.hiddenNodes, this.outputNodes] = values
 
-    this.weightsIh = new Matrix(this.hiddenNodes, this.inputNodes)
-    this.weightsHo = new Matrix(this.outputNodes, this.hiddenNodes)
-    this.weightsIh.random()
-    this.weightsHo.random()
+    const f = e => Math.random() * 2 - 1
+    this.weightsIh = Matrix.random(f, this.hiddenNodes, this.inputNodes)
+    this.weightsHo = Matrix.random(f, this.outputNodes, this.hiddenNodes)
 
-    this.biasH = new Matrix(this.hiddenNodes, 1)
-    this.biasO = new Matrix(this.outputNodes, 1)
-    this.biasH.random()
-    this.biasO.random()
+    this.biasH = Matrix.random(f, this.hiddenNodes, 1)
+    this.biasO = Matrix.random(f, this.outputNodes, 1)
 
     this.setActivationFunction()
     this.setLearningRate()
@@ -95,16 +92,21 @@ NeuralNetwork.prototype.setLearningRate = function (learningRate = 0.1) {
 NeuralNetwork.prototype.predict = function (inputArray) {
   // Generating the Hidden Outputs
   let inputs = Matrix.fromArray(inputArray)
+  // console.log('inputs', inputs.__value)
+  // console.log('this.weightsIh', this.weightsIh)
   let hidden = Matrix.dot(this.weightsIh, inputs)
-  hidden.add(this.biasH)
+  // console.log('hidden', hidden.__value)
+  hidden = Matrix.of(hidden).add(this.biasH)
   // activation function!
-  hidden.map(this.activationFunction.func)
+  hidden = hidden.map(row => row.map(this.activationFunction.func))
+  // console.log('hidden plus', hidden.__value)
 
   // Generating the output's output!
   let output = Matrix.dot(this.weightsHo, hidden)
-  output.add(this.biasO)
-  output.map(this.activationFunction.func)
-
+  // console.log('output', output.__value)
+  output = Matrix.of(output).add(this.biasO)
+  output = output.map(row => row.map(this.activationFunction.func))
+  // console.log('output plus', output.__value)
   // Sending back to the caller!
   return output.toArray()
 }
@@ -117,56 +119,69 @@ NeuralNetwork.prototype.predict = function (inputArray) {
  */
 NeuralNetwork.prototype.train = function (inputArray, targetArray) {
   // Generating the Hidden Outputs
+  // console.log({ inputArray, targetArray })
   let inputs = Matrix.fromArray(inputArray)
   let hidden = Matrix.dot(this.weightsIh, inputs)
 
-  hidden.add(this.biasH)
+  // console.log({ inputs, hidden })
+  // console.log(this.biasH)
+
+  hidden = Matrix.of(hidden).add(this.biasH)
   // activation function!
-  hidden.map(this.activationFunction.func)
+  hidden = hidden.map(row => row.map(this.activationFunction.func))
 
   // Generating the output's output!
   let outputs = Matrix.dot(this.weightsHo, hidden)
-  outputs.add(this.biasO)
-  outputs.map(this.activationFunction.func)
+  outputs = Matrix.of(outputs).add(this.biasO)
+  outputs = outputs.map(row => row.map(this.activationFunction.func))
 
   // Convert array to matrix object
   let targets = Matrix.fromArray(targetArray)
 
   // Calculate the error
   // ERROR = TARGETS - OUTPUTS
-  let outputErrors = Matrix.subtract(targets, outputs)
+  let outputErrors = Matrix.of(targets).subtract(outputs)
 
   // let gradient = outputs * (1 - outputs);
   // Calculate gradient
-  let gradients = Matrix.map(outputs, this.activationFunction.dfunc)
-  gradients.multiply(outputErrors)
-  gradients.multiply(this.learningRate)
+  let gradients = outputs.map(row => row.map(this.activationFunction.dfunc))
+  gradients = gradients.multiply(outputErrors)
+  gradients = gradients.multiply(this.learningRate)
 
   // Calculate deltas
   let hiddenT = Matrix.transpose(hidden)
   let weightHoDeltas = Matrix.dot(gradients, hiddenT)
 
   // Adjust the weights by deltas
-  this.weightsHo.add(weightHoDeltas)
+  this.weightsHo = Matrix.of(this.weightsHo).add(weightHoDeltas)
+  console.log('weightsHo', this.weightsHo)
+
   // Adjust the bias by its deltas (which is just the gradients)
-  this.biasO.add(gradients)
+  this.biasO = Matrix.of(this.biasO).add(gradients)
 
   // Calculate the hidden layer errors
   let whoT = Matrix.transpose(this.weightsHo)
+  console.log('whoT', whoT)
   let hiddenErrors = Matrix.dot(whoT, outputErrors)
+  console.log('hiddenErrors', hiddenErrors.__value)
 
   // Calculate hidden gradient
-  let hiddenGradient = Matrix.map(hidden, this.activationFunction.dfunc)
-  hiddenGradient.multiply(hiddenErrors)
-  hiddenGradient.multiply(this.learningRate)
+  let hiddenGradient = Matrix.of(hidden)
+    .map(row => row.map(this.activationFunction.dfunc))
+    .multiply(hiddenErrors)
+    .multiply(this.learningRate)
 
+  console.log('hiddenGradient', hiddenGradient.__value)
   // Calcuate input->hidden deltas
   let inputsT = Matrix.transpose(inputs)
-  let weightIhDeltas = Matrix.dot(hiddenGradient, inputsT)
+  console.log('inputsT', inputsT.__value)
 
-  this.weightsIh.add(weightIhDeltas)
+  let weightIhDeltas = Matrix.dot(hiddenGradient, inputsT)
+  console.log('weightIhDeltas', weightIhDeltas.__value)
+
+  this.weightsIh = Matrix.of(this.weightsIh).add(weightIhDeltas)
   // Adjust the bias by its deltas (which is just the gradients)
-  this.biasH.add(hiddenGradient)
+  this.biasH = Matrix.of(this.biasH).add(hiddenGradient)
 }
 
 export default NeuralNetwork
@@ -182,7 +197,7 @@ export default NeuralNetwork
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jun 16 2019 12:07:22 GMT+0200 (Central European Summer Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Oct 14 2019 21:49:12 GMT+0200 (Central European Summer Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

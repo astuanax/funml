@@ -25,21 +25,11 @@ function getRandomInt (min, max) {
 
 var nn = new NeuralNetwork(2, 4, 1)
 
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 100000; i++) {
   let data = trainingData[getRandomInt(0, 3)]
   const input = data.inputs.map(x => [x])
   const output = data.outputs.map(x => [x])
-  console.log(data, input, output)
   nn.train(input, output)
-}
-
-console.table(nn.weights_ih.data)
-console.table(nn.bias_h.data)
-console.table(nn.weights_ho.data)
-console.table(nn.bias_o.data)
-
-for (let i in trainingData) {
-  console.log(trainingData[i].inputs, nn.predict(trainingData[i].inputs))
 }
 
 describe('create a NeuralNetwork', function () {
@@ -49,14 +39,8 @@ describe('create a NeuralNetwork', function () {
   })
 
   it('it finds solution to XOR', function () {
-    var nn = new NeuralNetwork(2, 4, 1)
-    for (let i = 0; i < 10000; i++) {
-      let data = trainingData[getRandomInt(0, 3)]
-      nn.train(data.inputs.map(x => [x]), data.outputs.map(x => [x]))
-    }
-
     for (let i in trainingData) {
-      console.log(trainingData[i].inputs, nn.predict(trainingData[i].inputs))
+      chai.expect(trainingData[i].outputs[0]).to.equal(Math.round(nn.predict(trainingData[i].inputs.map(x => [x]))[0]))
     }
   })
 })
