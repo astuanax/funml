@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e83c24ba-ba86-43d8-a3ae-0928eb1c0bfb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ActivationFunction.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ActivationFunction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ActivationFunction.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ActivationFunction.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/NeuralNetwork.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/NeuralNetwork.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/NeuralNetwork.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/NeuralNetwork.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Perceptron.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Perceptron.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/global.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/global.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/perceptron.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/perceptron.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/util_sigmoid.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_sigmoid.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/util_tanh.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_tanh.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/@astuanax/funml.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/@astuanax/funml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/@astuanax/funml.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/@astuanax/funml.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NeuralNetwork.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NeuralNetwork.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/NeuralNetwork.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/NeuralNetwork.spec.js" afterDir="false" />
-    </list>
+    <list default="true" id="e83c24ba-ba86-43d8-a3ae-0928eb1c0bfb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -91,20 +72,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/NeuralNetwork.spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -128,6 +96,7 @@
       <find>subtract</find>
       <find>console</find>
       <find>is (</find>
+      <find>row.map</find>
     </findStrings>
     <replaceStrings>
       <replace>* @function NeuralNetwork#</replace>
@@ -195,41 +164,12 @@
             <path>
               <item name="funml" type="b2602c69:ProjectViewProjectNode" />
               <item name="funml" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="funml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="funml" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="funml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="funml" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="@astuanax" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="funml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="funml" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="@astuanax" type="462c0819:PsiDirectoryNode" />
-              <item name="funml.js" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="funml" type="b2602c69:ProjectViewProjectNode" />
               <item name="funml" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="funml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="funml" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="funml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="funml" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -292,11 +232,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23564000" />
+    <option name="totallyTimeSpent" value="23565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="492" y="23" width="1689" height="1237" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -411,9 +350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10590">
           <caret line="715" selection-start-line="715" selection-end-line="715" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -428,9 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3360">
           <caret line="225" selection-start-line="225" selection-end-line="225" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -445,9 +378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -472,9 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
