@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ActivationFunction.html">ActivationFunction</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="NeuralNetwork.html">NeuralNetwork</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setActivationFunction">setActivationFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setLearningRate">setLearningRate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#train">train</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Perceptron.html">Perceptron</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#.of">of</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#train">train</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#sigmoid">sigmoid</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#tanh">tanh</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ActivationFunction.html">ActivationFunction</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Impurity.html">Impurity</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="NeuralNetwork.html">NeuralNetwork</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setActivationFunction">setActivationFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setLearningRate">setLearningRate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#train">train</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Perceptron.html">Perceptron</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#.of">of</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#train">train</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#emtropy">emtropy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#gini">gini</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#sigmoid">sigmoid</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#tanh">tanh</a></span></li>
 </nav>
 
 <div id="main">
@@ -92,21 +92,15 @@ NeuralNetwork.prototype.setLearningRate = function (learningRate = 0.1) {
 NeuralNetwork.prototype.predict = function (inputArray) {
   // Generating the Hidden Outputs
   let inputs = Matrix.fromArray(inputArray)
-  // console.log('inputs', inputs.__value)
-  // console.log('this.weightsIh', this.weightsIh)
   let hidden = Matrix.dot(this.weightsIh, inputs)
-  // console.log('hidden', hidden.__value)
   hidden = Matrix.of(hidden).add(this.biasH)
   // activation function!
   hidden = hidden.map(row => row.map(this.activationFunction.func))
-  // console.log('hidden plus', hidden.__value)
 
   // Generating the output's output!
   let output = Matrix.dot(this.weightsHo, hidden)
-  // console.log('output', output.__value)
   output = Matrix.of(output).add(this.biasO)
   output = output.map(row => row.map(this.activationFunction.func))
-  // console.log('output plus', output.__value)
   // Sending back to the caller!
   return output.toArray()
 }
@@ -119,12 +113,8 @@ NeuralNetwork.prototype.predict = function (inputArray) {
  */
 NeuralNetwork.prototype.train = function (inputArray, targetArray) {
   // Generating the Hidden Outputs
-  // console.log({ inputArray, targetArray })
   let inputs = Matrix.fromArray(inputArray)
   let hidden = Matrix.dot(this.weightsIh, inputs)
-
-  // console.log({ inputs, hidden })
-  // console.log(this.biasH)
 
   hidden = Matrix.of(hidden).add(this.biasH)
   // activation function!
@@ -154,16 +144,13 @@ NeuralNetwork.prototype.train = function (inputArray, targetArray) {
 
   // Adjust the weights by deltas
   this.weightsHo = Matrix.of(this.weightsHo).add(weightHoDeltas)
-  console.log('weightsHo', this.weightsHo)
 
   // Adjust the bias by its deltas (which is just the gradients)
   this.biasO = Matrix.of(this.biasO).add(gradients)
 
   // Calculate the hidden layer errors
   let whoT = Matrix.transpose(this.weightsHo)
-  console.log('whoT', whoT)
   let hiddenErrors = Matrix.dot(whoT, outputErrors)
-  console.log('hiddenErrors', hiddenErrors.__value)
 
   // Calculate hidden gradient
   let hiddenGradient = Matrix.of(hidden)
@@ -171,13 +158,10 @@ NeuralNetwork.prototype.train = function (inputArray, targetArray) {
     .multiply(hiddenErrors)
     .multiply(this.learningRate)
 
-  console.log('hiddenGradient', hiddenGradient.__value)
   // Calcuate input->hidden deltas
   let inputsT = Matrix.transpose(inputs)
-  console.log('inputsT', inputsT.__value)
 
   let weightIhDeltas = Matrix.dot(hiddenGradient, inputsT)
-  console.log('weightIhDeltas', weightIhDeltas.__value)
 
   this.weightsIh = Matrix.of(this.weightsIh).add(weightIhDeltas)
   // Adjust the bias by its deltas (which is just the gradients)
@@ -197,7 +181,7 @@ export default NeuralNetwork
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Oct 14 2019 21:49:12 GMT+0200 (Central European Summer Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Oct 23 2019 21:55:06 GMT+0200 (Central European Summer Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

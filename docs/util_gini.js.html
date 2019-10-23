@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home - Documentation</title>
+    <title>util/gini.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,31 +29,31 @@
 
 <div id="main">
     
+    <h1 class="page-title">util/gini.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Impurity from '../Impurity'
+import { add, fold } from 'fun.js'
+import mapReduce from './mapReduce'
 
-
-
-
-
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>funml</h1><p>Machine learning with functional undertones.</p>
-<h2>Perceptron</h2><p>A Perceptron class to learn and solve simple linear problems.</p>
-<h2>NeuralNetwork</h2><p>A basic multilayered neural network.</p></article>
+/**
+ * @function gini
+ * @type {Impurity}
+ */
+const gini = new Impurity(
+  arr => fold(mapReduce(x => x * (1 - x), add), 0, arr)
+)
+export default gini
+</code></pre>
+        </article>
     </section>
-
-
 
 
 
