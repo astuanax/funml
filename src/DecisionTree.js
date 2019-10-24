@@ -48,7 +48,7 @@ DecisionTree.prototype.split = function (data, m, n) {
 }
 
 DecisionTree.prototype.train = function (data = this.data) {
-  if (this.data.getRows() === 0) {
+  if (data.getRows() === 0) {
     return new Node()
   }
   const score = this.evalFunction.func(data) // Matrix
@@ -65,9 +65,10 @@ DecisionTree.prototype.train = function (data = this.data) {
       const matrixSplit = this.split(data, i, value)
       const p = matrixSplit[0].getRows() / data.getRows()
       console.log('p', p)
-      const entropy = this.evalFunction.func(matrixSplit[0])
-      const gain = score - (p * entropy) - ((1 - p) * entropy)
-      console.log('gain', gain, entropy)
+      const entropy0 = this.evalFunction.func(matrixSplit[0])
+      const entropy1 = this.evalFunction.func(matrixSplit[1])
+      const gain = score - (p * entropy0) - ((1 - p) * entropy1)
+      console.log('gain', gain, entropy0, entropy1)
       if (gain > bestGain && matrixSplit[0].getRows() > 0 && matrixSplit[1].getRows() > 0) {
         bestGain = gain
         bestAttribute = [i, value]

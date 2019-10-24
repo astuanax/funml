@@ -22,7 +22,6 @@
       <change beforePath="$PROJECT_DIR$/lib/@astuanax/funml.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/@astuanax/funml.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DecisionTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DecisionTree.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/entropy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/entropy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/DecisionTree.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/DecisionTree.spec.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,7 +54,7 @@
           <entry key="eslintrc" value="1" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="60" />
+          <entry key="js" value="61" />
           <entry key="json" value="6" />
           <entry key="md" value="2" />
           <entry key="nvmrc" value="1" />
@@ -67,7 +66,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="10" />
-          <entry key="JavaScript" value="60" />
+          <entry key="JavaScript" value="61" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="YAML" value="1" />
@@ -76,7 +75,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="babelrc" value="3" />
-          <entry key="js" value="3612" />
+          <entry key="js" value="3755" />
           <entry key="json" value="105" />
           <entry key="md" value="181" />
         </counts>
@@ -84,7 +83,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="108" />
-          <entry key="JavaScript" value="3612" />
+          <entry key="JavaScript" value="3755" />
           <entry key="Markdown" value="181" />
         </counts>
       </usages-collector>
@@ -122,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/test/DecisionTree.spec.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -133,10 +132,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DecisionTree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="558">
+              <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/entropy.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-start-column="3" selection-end-line="7" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,15 +176,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
               <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.nycrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -251,13 +253,13 @@
         <option value="$PROJECT_DIR$/src/NeuralNetwork.js" />
         <option value="$PROJECT_DIR$/test/NeuralNetwork.spec.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/util/entropy.js" />
-        <option value="$PROJECT_DIR$/src/DecisionTree.js" />
         <option value="$PROJECT_DIR$/test/DecisionTree.spec.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/.nycrc" />
         <option value="$PROJECT_DIR$/.babelrc" />
+        <option value="$PROJECT_DIR$/src/util/entropy.js" />
+        <option value="$PROJECT_DIR$/src/DecisionTree.js" />
       </list>
     </option>
   </component>
@@ -391,17 +393,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29264000" />
+    <option name="totallyTimeSpent" value="30061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="484" y="29" width="1689" height="1237" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.20563549" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.34148473" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3624454" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3299578" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -531,16 +534,6 @@
     <entry file="file://$PROJECT_DIR$/src/Impurity.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/entropy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -620,17 +613,27 @@
     <entry file="file://$PROJECT_DIR$/test/DecisionTree.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/entropy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-start-column="3" selection-end-line="7" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DecisionTree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="558">
+          <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
