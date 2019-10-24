@@ -11,15 +11,15 @@ class Node {
   }
 }
 
-export default class DecisionTree {
+class DecisionTree {
   constructor (data, evalFunction = entropy) {
     this.data = Matrix.of(data)
     this.evalFunction = evalFunction
   }
 }
 
-DecisionTree.prototype.getColumn = function (index) {
-  return this.data.map(x => x[index])
+DecisionTree.prototype.getColumn = function (data, index) {
+  return data.map(x => x[index])
 }
 
 DecisionTree.prototype.split = function (data, m, n) {
@@ -35,16 +35,15 @@ DecisionTree.prototype.split = function (data, m, n) {
   const left = data.fold((acc, x) => {
     if (splittingFunction(x)) {
       acc.push(x)
-      return acc
     }
+    return acc
   })
   const right = data.fold((acc, x) => {
     if (!splittingFunction(x)) {
       acc.push(x)
-      return acc
     }
+    return acc
   })
-
   return [left, right]
 }
 
@@ -61,29 +60,39 @@ DecisionTree.prototype.train = function (data = this.data) {
   const columnCount = this.data.getCols() - 1 // remove last cell >> dependant value
 
   for (let i = 0; i < columnCount; ++i) {
-    const columnValues = this.getColumn(i).toArray()
-    console.table(columnValues)
-    columnValues.forEach((value, idx, arr) => {
-      const matrixSplit = this.split(i, value)
-      const p = matrixSplit[0].getRows() / this.data.getRows()
-      const gain = score - (p * this.evalFunction(matrixSplit[0])) - ((1 - p) * this.evalFunction(matrixSplit[0]))
-      if (gain > bestGain && matrixSplit.length > 0 && matrixSplit.length > 0) {
+    const columnValues = this.getColumn(data, i).__value
+    columnValues.forEach(value => {
+      const matrixSplit = this.split(data, i, value)
+      const p = matrixSplit[0].getRows() / data.getRows()
+      console.log('p', p)
+      const entropy = this.evalFunction.func(matrixSplit[0])
+      const gain = score - (p * entropy) - ((1 - p) * entropy)
+      console.log('gain', gain, entropy)
+      if (gain > bestGain && matrixSplit[0].getRows() > 0 && matrixSplit[1].getRows() > 0) {
         bestGain = gain
-        bestAttribute = [i, columnValues[idx]]
+        bestAttribute = [i, value]
         bestSets = matrixSplit
       }
     })
   }
-
+  console.log('bestGain', bestGain)
   if (bestGain > 0) {
-    const left = this.train(bestSets[0])
-    const right = this.train(bestSets[1])
-    return new Node([], bestAttribute[0], bestAttribute[1], left, right)
+    // const left = new DecisionTree(bestSets[0].__value)
+    const leftTrained = this.train(bestSets[0])
+    // const right = new DecisionTree(bestSets[1].__value)
+    const rightTrained = this.train(bestSets[0])
+
+    console.log(leftTrained, rightTrained)
+    const _node = new Node(bestAttribute[0], bestAttribute[1], leftTrained, rightTrained)
+    console.log('_node', _node)
+    return _node
   } else {
-    return new Node(this.classes())
+    return new Node()
   }
 }
 
 DecisionTree.prototype.predict = function predict () {
 
 }
+
+export default DecisionTree
