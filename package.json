@@ -3,7 +3,8 @@
   "sideEffects": false,
   "version": "1.0.0",
   "description": "Machine learning with functional undertones",
-  "main": "src/index.js",
+  "main": "lib/@astuanax/funml.js",
+  "module": "src/index.js",
   "scripts": {
     "build": "./node_modules/.bin/eslint ./src --fix && npm run compile && npm run test && npm run jsdocs-json && npm run jsdocs && npm run size",
     "compile": "webpack --env dev && webpack --env build",
@@ -68,10 +69,6 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "yargs": "^10.0.3"
-  },
-  "nyc": {
-    "sourceMap": false,
-    "instrument": false
   },
   "dependencies": {
     "@astuanax/funmatrix": "github:astuanax/funmatrix",
