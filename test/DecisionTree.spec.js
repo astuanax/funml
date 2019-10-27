@@ -1,5 +1,5 @@
 import chai from 'chai'
-import { DecisionTree, gini, variance, entropy } from '../lib/@astuanax/funml'
+import { DecisionTree, gini, variance, entropy, NeuralNetwork } from '../lib/@astuanax/funml'
 
 
 
@@ -157,9 +157,31 @@ const data = [
 ]
 
 
+const trainingData = data.filter((x, idx) => (idx + 1) % 7 === 0)
 
 
 
+describe('create a Decisiontree', function () {
+  it('it returns type Decisiontree', function () {
+    var dt = new DecisionTree(data)
+    chai.expect(dt.type).to.equal('DecisionTree')
+  })
+
+  it('it finds the Iris flower', function () {
+    const dt_gini = new DecisionTree(data)
+    const model_gini = dt_gini.train()
+
+
+    for (let i in trainingData) {
+      var observation  = trainingData[i]
+      var expected  = observation.pop()
+      const res = dt_gini.predict(observation, model_gini)
+
+      // console.log(i, observation, res, expected)
+      chai.expect(res[expected]).to.exist
+    }
+  })
+})
 
 
 
@@ -177,11 +199,11 @@ const data = [
 // console.table(model.left.right.right)
 // console.table(model.right)
 //
-const dt_gini = new DecisionTree(data, gini)
-const model_gini = dt_gini.train()
-console.table(model_gini)
-const res = dt_gini.predict([6.0, 2.2, 5.0, 1.5], model_gini)
-console.log(res)
+// const dt_gini = new DecisionTree(data, gini)
+// const model_gini = dt_gini.train()
+// console.table(model_gini)
+// const res = dt_gini.predict([6.0, 2.2, 5.0, 1.5], model_gini)
+// console.log(res)
 
 // console.table(model_gini)
 // console.table(model_gini.left)

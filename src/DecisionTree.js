@@ -1,27 +1,37 @@
 import Matrix from '@astuanax/funmatrix'
 import entropy from './util/entropy'
+import Node from './Node'
 
-class Node {
-  constructor (results, col, value, left, right) {
-    this.col = col || -1
-    this.value = null
-    this.left = left
-    this.right = right
-    this.results = results
-  }
-}
-
+/**
+ * @class DecisionTree
+ * @param {Matrix | Array} data
+ * @param {Function} evalFunction
+ */
 class DecisionTree {
   constructor (data, evalFunction = entropy) {
     this.data = Matrix.of(data)
     this.evalFunction = evalFunction
+    this.type = 'DecisionTree'
   }
 }
 
+/**
+ * @memberOf DecisionTree#getColumn
+ * @param data
+ * @param index
+ * @returns {Matrix}
+ */
 DecisionTree.prototype.getColumn = function (data, index) {
   return data.map(x => x[index])
 }
 
+/**
+ * @memberOf DecisionTree#split
+ * @param data
+ * @param m
+ * @param n
+ * @returns {Matrix[]}
+ */
 DecisionTree.prototype.split = function (data, m, n) {
   let splittingFunction
   //   splittingFunction = None
@@ -47,6 +57,11 @@ DecisionTree.prototype.split = function (data, m, n) {
   return [left, right]
 }
 
+/**
+ * @memberOf DecisionTree#train
+ * @param {Matrix} data
+ * @returns {Node}
+ */
 DecisionTree.prototype.train = function (data = this.data) {
   if (data.getRows() === 0) {
     return new Node()
@@ -88,12 +103,16 @@ DecisionTree.prototype.train = function (data = this.data) {
   }
 }
 
+/**
+ * @memberOf DecisionTree#predict
+ * @param {Array} observations
+ * @param {Node} node
+ * @returns {*}
+ */
 DecisionTree.prototype.predict = function predict (observations, node) {
   if (node.results) {
-    console.log('node', node.result)
     return node.results
   } else {
-    console.log('Branch', node)
     const v = observations[node.col]
     let branch
     if (isNaN(v)) {
@@ -111,7 +130,6 @@ DecisionTree.prototype.predict = function predict (observations, node) {
         branch = node.right
       }
     }
-    console.table(branch)
     return this.predict(observations, branch)
   }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/tanh.js - Documentation</title>
+    <title>Node.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/tanh.js</h1>
+    <h1 class="page-title">Node.js</h1>
     
 
     
@@ -39,17 +39,25 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import ActivationFunction from '../ActivationFunction'
-
-/**
- * @function tanh
- * @type {ActivationFunction}
+            <pre class="prettyprint source linenums"><code>/**
+ * @class Node
+ * @param {Matrix | Array} results
+ * @param {Number} col
+ * @param {Number | String} value
+ * @param {Node} left
+ * @param {Node} right
  */
-const tanh = new ActivationFunction(
-  x => Math.tanh(x),
-  y => 1 - (y * y)
-)
-export default tanh
+class Node {
+  constructor (results, col, value, left, right) {
+    this.col = col || -1
+    this.value = value
+    this.left = left
+    this.right = right
+    this.results = results
+  }
+}
+
+export default Node
 </code></pre>
         </article>
     </section>
