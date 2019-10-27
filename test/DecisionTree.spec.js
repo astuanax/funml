@@ -1,5 +1,6 @@
 import chai from 'chai'
-import { DecisionTree } from '../lib/@astuanax/funml'
+import { DecisionTree, gini, variance, entropy } from '../lib/@astuanax/funml'
+
 
 
 const data = [
@@ -155,6 +156,43 @@ const data = [
   [5.9, 3.0, 5.1, 1.8, 'Iris-virginica']
 ]
 
-const dt = new DecisionTree(data)
-const model = dt.train()
-console.table(model)
+
+
+
+
+
+
+
+
+//
+//
+//
+// const dt = new DecisionTree(data, entropy)
+// const model = dt.train()
+// console.table(model)
+// console.table(model.left)
+// console.table(model.left.left)
+// console.table(model.left.right)
+// console.table(model.left.right.left)
+// console.table(model.left.right.right)
+// console.table(model.right)
+//
+const dt_gini = new DecisionTree(data, gini)
+const model_gini = dt_gini.train()
+console.table(model_gini)
+const res = dt_gini.predict([6.0, 2.2, 5.0, 1.5], model_gini)
+console.log(res)
+
+// console.table(model_gini)
+// console.table(model_gini.left)
+// console.table(model_gini.right)
+// console.table(model_gini.left.right)
+// console.table(model_gini.left.left)
+
+// const dt_var = new DecisionTree(data, variance)
+// const model_var = dt_var.train()
+// console.table(model_var)
+// console.table(model_var.left)
+// console.table(model_var.right)
+// console.table(model_var.left.right)
+// console.table(model_var.left.left)

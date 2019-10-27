@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ActivationFunction.html">ActivationFunction</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Impurity.html">Impurity</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="NeuralNetwork.html">NeuralNetwork</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setActivationFunction">setActivationFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setLearningRate">setLearningRate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#train">train</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Perceptron.html">Perceptron</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#.of">of</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#train">train</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#emtropy">emtropy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#gini">gini</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#sigmoid">sigmoid</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#tanh">tanh</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ActivationFunction.html">ActivationFunction</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Impurity.html">Impurity</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="NeuralNetwork.html">NeuralNetwork</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setActivationFunction">setActivationFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#setLearningRate">setLearningRate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NeuralNetwork.html#train">train</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Perceptron.html">Perceptron</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#.of">of</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#predict">predict</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Perceptron.html#train">train</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#emtropy">emtropy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#gini">gini</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#sigmoid">sigmoid</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#tanh">tanh</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#variance">variance</a></span></li>
 </nav>
 
 <div id="main">
@@ -40,15 +40,43 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import Impurity from '../Impurity'
-import { add, fold } from 'fun.js'
-import mapReduce from './mapReduce'
+import { fold } from 'fun.js'
+
+const frequencies = total => obj => fold((acc, y) => {
+  acc.push(y / total)
+  return acc
+})([])(obj)
 
 /**
  * @function gini
  * @type {Impurity}
  */
 const gini = new Impurity(
-  arr => fold(mapReduce(x => x * (1 - x), add), 0, arr)
+  matrix => {
+    const nrRows = matrix.getRows()
+
+    const arr = matrix.__value.map(row => row[row.length - 1])
+    const countedClasses = arr.reduce((acc, val) => {
+      acc[val] = acc[val] === undefined ? 1 : acc[val] += 1
+      return acc
+    }, {})
+    const classFrequencies = frequencies(nrRows)(countedClasses)
+
+    let imp = 0
+    const len = classFrequencies.length
+    for (let i = 0; i &lt; len; ++i) {
+      const p1 = classFrequencies[i]
+      for (let j = 0; j &lt; len; ++j) {
+        if (i === j) {
+          // skip
+        } else {
+          const p2 = classFrequencies[j]
+          imp += p1 * p2
+        }
+      }
+    }
+    return imp
+  }
 )
 export default gini
 </code></pre>
@@ -63,7 +91,7 @@ export default gini
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Oct 24 2019 21:57:43 GMT+0200 (Central European Summer Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Oct 27 2019 08:18:39 GMT+0100 (Central European Standard Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

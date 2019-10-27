@@ -27,7 +27,6 @@ const entropy = new Impurity(
     const nrRows = matrix.getRows()
     const classFrequencies = frequencies(nrRows)(countedClasses)
     const res = fold(mapReduce(x => -x * Math.log2(x), add), 0, classFrequencies)
-    console.log({ arr, nrRows, countedClasses, classFrequencies, res })
     return res
   }
 )
