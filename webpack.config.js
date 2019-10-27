@@ -32,8 +32,20 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.js$|\.jsx$/,
+        use: {
+          loader: 'istanbul-instrumenter-loader',
+          options: { esModules: true }
+        },
+        enforce: 'post',
+        exclude: /node_modules|\.spec\.js$/,
+      },
+      {
         test: /(\.jsx|\.js)$/,
         loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        },
         exclude: /(node_modules|bower_components)/
       },
       {
@@ -46,7 +58,11 @@ const config = {
   resolve: {
     modules: [path.resolve('./node_modules'), path.resolve('./src')],
     extensions: ['.json', '.js']
-  }
+  },
+  externals: [
+    "fun.js",  "@astuanax/funmatrix"
+  ]
+
 }
 
 module.exports = config

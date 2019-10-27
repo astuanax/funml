@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/tanh.js - Documentation</title>
+    <title>util/entropy.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/tanh.js</h1>
+    <h1 class="page-title">util/entropy.js</h1>
     
 
     
@@ -39,17 +39,39 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import ActivationFunction from '../ActivationFunction'
+            <pre class="prettyprint source linenums"><code>import Impurity from '../Impurity'
+import { add, fold } from 'fun.js'
+import mapReduce from './mapReduce'
+
+// const uniqsCount = fold((acc, val) => {
+//   acc[val] = acc[val] === undefined ? 1 : acc[val] += 1
+//   return acc
+// }, {})
+
+const frequencies = total => obj => fold((acc, y) => {
+  acc.push(y / total)
+  return acc
+})([])(obj)
 
 /**
- * @function tanh
- * @type {ActivationFunction}
+ * @function emtropy
+ * @type {Impurity}
  */
-const tanh = new ActivationFunction(
-  x => Math.tanh(x),
-  y => 1 - (y * y)
+const entropy = new Impurity(
+  matrix => {
+    // TODO check instanceof Matrix
+    const arr = matrix.__value.map(row => row[row.length - 1])
+    const countedClasses = arr.reduce((acc, val) => {
+      acc[val] = acc[val] === undefined ? 1 : acc[val] += 1
+      return acc
+    }, {})
+    const nrRows = matrix.getRows()
+    const classFrequencies = frequencies(nrRows)(countedClasses)
+    const res = fold(mapReduce(x => -x * Math.log2(x), add), 0, classFrequencies)
+    return res
+  }
 )
-export default tanh
+export default entropy
 </code></pre>
         </article>
     </section>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/tanh.js - Documentation</title>
+    <title>Impurity.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/tanh.js</h1>
+    <h1 class="page-title">Impurity.js</h1>
     
 
     
@@ -39,17 +39,15 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import ActivationFunction from '../ActivationFunction'
-
-/**
- * @function tanh
- * @type {ActivationFunction}
+            <pre class="prettyprint source linenums"><code>/**
+ * @class Impurity
+ * @param func
  */
-const tanh = new ActivationFunction(
-  x => Math.tanh(x),
-  y => 1 - (y * y)
-)
-export default tanh
+export default class Impurity {
+  constructor (func) {
+    this.func = func
+  }
+}
 </code></pre>
         </article>
     </section>

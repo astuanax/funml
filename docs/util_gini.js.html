@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/tanh.js - Documentation</title>
+    <title>util/gini.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/tanh.js</h1>
+    <h1 class="page-title">util/gini.js</h1>
     
 
     
@@ -39,17 +39,46 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import ActivationFunction from '../ActivationFunction'
+            <pre class="prettyprint source linenums"><code>import Impurity from '../Impurity'
+import { fold } from 'fun.js'
+
+const frequencies = total => obj => fold((acc, y) => {
+  acc.push(y / total)
+  return acc
+})([])(obj)
 
 /**
- * @function tanh
- * @type {ActivationFunction}
+ * @function gini
+ * @type {Impurity}
  */
-const tanh = new ActivationFunction(
-  x => Math.tanh(x),
-  y => 1 - (y * y)
+const gini = new Impurity(
+  matrix => {
+    const nrRows = matrix.getRows()
+
+    const arr = matrix.__value.map(row => row[row.length - 1])
+    const countedClasses = arr.reduce((acc, val) => {
+      acc[val] = acc[val] === undefined ? 1 : acc[val] += 1
+      return acc
+    }, {})
+    const classFrequencies = frequencies(nrRows)(countedClasses)
+
+    let imp = 0
+    const len = classFrequencies.length
+    for (let i = 0; i &lt; len; ++i) {
+      const p1 = classFrequencies[i]
+      for (let j = 0; j &lt; len; ++j) {
+        if (i === j) {
+          // skip
+        } else {
+          const p2 = classFrequencies[j]
+          imp += p1 * p2
+        }
+      }
+    }
+    return imp
+  }
 )
-export default tanh
+export default gini
 </code></pre>
         </article>
     </section>

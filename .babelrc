@@ -1,11 +1,9 @@
 {
-  "presets": ["env"],
-  "plugins": ["babel-plugin-add-module-exports"],
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-syntax-dynamic-import"],
   "env": {
     "test": {
-      "plugins": [
-        ["istanbul"]
-      ]
+      "plugins": [ "istanbul" ]
     }
   }
 }

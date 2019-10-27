@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/tanh.js - Documentation</title>
+    <title>util/variance.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/tanh.js</h1>
+    <h1 class="page-title">util/variance.js</h1>
     
 
     
@@ -39,17 +39,28 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import ActivationFunction from '../ActivationFunction'
+            <pre class="prettyprint source linenums"><code>import Impurity from '../Impurity'
+import { add, sum } from 'fun.js'
+import mapReduce from './mapReduce'
 
 /**
- * @function tanh
- * @type {ActivationFunction}
+ * @function variance
+ * @type {Impurity}
  */
-const tanh = new ActivationFunction(
-  x => Math.tanh(x),
-  y => 1 - (y * y)
+const variance = new Impurity(
+  matrix => {
+    const nrRows = matrix.getRows()
+    if (nrRows === 0) {
+      return 0
+    }
+
+    const arr = matrix.__value.map(row => row[row.length - 1])
+    const mean = sum(arr) / nrRows
+    return mapReduce(x => Math.pow(x - mean, 2), add)(arr) / nrRows
+  }
 )
-export default tanh
+
+export default variance
 </code></pre>
         </article>
     </section>
