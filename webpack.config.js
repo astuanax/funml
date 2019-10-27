@@ -20,11 +20,10 @@ if (env === 'build') {
 const config = {
   mode: mode,
   entry: [__dirname + '/src/index.js'],
-  devtool: 'inline-source-map',
   output: {
     path: __dirname + '/lib',
     filename: outputFile,
-    library: libraryName,
+    library: 'funml',
     libraryTarget: 'umd',
     umdNamedDefine: true,
     globalObject: "typeof self !== 'undefined' ? self : this"
