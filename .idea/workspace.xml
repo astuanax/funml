@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e83c24ba-ba86-43d8-a3ae-0928eb1c0bfb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ActivationFunction.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ActivationFunction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ActivationFunction.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ActivationFunction.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Impurity.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Impurity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Impurity.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Impurity.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/NeuralNetwork.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/NeuralNetwork.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/NeuralNetwork.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/NeuralNetwork.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Perceptron.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Perceptron.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/global.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/global.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/perceptron.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/perceptron.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/util_entropy.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_entropy.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/util_gini.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_gini.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/util_sigmoid.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_sigmoid.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/util_tanh.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_tanh.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/@astuanax/funml.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/@astuanax/funml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/@astuanax/funml.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/@astuanax/funml.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DecisionTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DecisionTree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/DecisionTree.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/DecisionTree.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,10 +37,10 @@
           <entry key="html" value="2" />
           <entry key="js" value="68" />
           <entry key="json" value="6" />
-          <entry key="md" value="2" />
+          <entry key="md" value="3" />
           <entry key="nvmrc" value="1" />
           <entry key="nycrc" value="1" />
-          <entry key="yml" value="1" />
+          <entry key="yml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -69,9 +48,9 @@
           <entry key="HTML" value="2" />
           <entry key="JSON" value="10" />
           <entry key="JavaScript" value="68" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="YAML" value="1" />
+          <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -80,7 +59,7 @@
           <entry key="html" value="1" />
           <entry key="js" value="4598" />
           <entry key="json" value="105" />
-          <entry key="md" value="181" />
+          <entry key="md" value="267" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -88,7 +67,7 @@
           <entry key="HTML" value="1" />
           <entry key="JSON" value="108" />
           <entry key="JavaScript" value="4598" />
-          <entry key="Markdown" value="181" />
+          <entry key="Markdown" value="267" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -112,7 +91,28 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="180">
+                <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DecisionTree.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="65">
@@ -216,7 +216,6 @@
         <option value="$PROJECT_DIR$/src/util/sigmoid.js" />
         <option value="$PROJECT_DIR$/src/util/tanh.js" />
         <option value="$PROJECT_DIR$/src/ActivationFunction.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Perceptron.js" />
         <option value="$PROJECT_DIR$/src/NeuralNetwork.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -231,6 +230,7 @@
         <option value="$PROJECT_DIR$/src/Node.js" />
         <option value="$PROJECT_DIR$/test/DecisionTree.spec.js" />
         <option value="$PROJECT_DIR$/src/DecisionTree.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -364,7 +364,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36669000" />
+    <option name="totallyTimeSpent" value="36914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="484" y="29" width="1689" height="1237" extended-state="0" />
@@ -372,10 +372,10 @@
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.20563549" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.20563549" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.38864627" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.38864627" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3299578" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -425,9 +425,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.js" />
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.nvmrc">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -447,16 +444,6 @@
     <entry file="file://$PROJECT_DIR$/src/util.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/@astuanax/funmatrix/src/util/dot.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" selection-start-line="10" selection-end-line="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -641,6 +628,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DecisionTree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/DecisionTree.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -651,13 +648,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecisionTree.js">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="180">
+            <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
