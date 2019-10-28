@@ -64,7 +64,7 @@
           <entry key="html" value="1" />
           <entry key="js" value="4613" />
           <entry key="json" value="140" />
-          <entry key="md" value="1110" />
+          <entry key="md" value="1281" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
@@ -73,7 +73,7 @@
           <entry key="HTML" value="1" />
           <entry key="JSON" value="143" />
           <entry key="JavaScript" value="4614" />
-          <entry key="Markdown" value="1109" />
+          <entry key="Markdown" value="1280" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="YAML" value="1" />
         </counts>
@@ -91,8 +91,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="479">
-                <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
+              <first_editor relative-caret-position="54">
+                <caret line="11" column="106" selection-start-line="11" selection-start-column="106" selection-end-line="11" selection-end-column="106" />
               </first_editor>
               <second_editor />
             </state>
@@ -206,9 +206,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="872" />
+    <option name="x" value="430" />
     <option name="y" value="53" />
-    <option name="width" value="1689" />
+    <option name="width" value="2131" />
     <option name="height" value="1237" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -295,18 +295,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40935000" />
+    <option name="totallyTimeSpent" value="41178000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="872" y="53" width="1689" height="1237" extended-state="0" />
-    <editor active="true" />
+    <frame x="430" y="53" width="2131" height="1237" extended-state="0" />
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.20563549" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.16255924" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.38864627" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.38864627" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3299578" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -615,8 +614,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="479">
-            <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
+          <first_editor relative-caret-position="54">
+            <caret line="11" column="106" selection-start-line="11" selection-start-column="106" selection-end-line="11" selection-end-column="106" />
           </first_editor>
           <second_editor />
         </state>
