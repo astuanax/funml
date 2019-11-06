@@ -240,6 +240,6 @@ describe('create a NeuralNetwork', function () {
 
     const correct = testResults.reduce((prev, next) => { return prev + (Math.round(next.result[0][0]) === next.output[0]) }, 0)
     const successRate = correct / testResults.length
-    chai.expect(successRate).to.be.above(0.8)
+    chai.expect(successRate).to.be.above(0.75)
   })
 })
