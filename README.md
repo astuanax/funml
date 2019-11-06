@@ -52,7 +52,53 @@ var successRate = [test.map(function (x, idx) {
 
 ## NeuralNetwork
 
-A basic multilayered neural network.
+The NeuralNetwork can be used to learn from the sonar.csv dataset. The [initial paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.299.8959&rep=rep1&type=pdf) uses 60 input layers, 3 hidden layers, and 1 output layer.
+We will use around 66% of the data set to train the neural network and 33% to verify its acurracy
+ 
+````javascript
+const dataset = load("sonar.csv") //load dataset
+
+const train = dataset.filter((x, idx) => idx % 3 !== 0)
+const test = dataset.filter((x, idx) => idx % 3 === 0)
+
+let nn = new NeuralNetwork(60, 3, 1)
+```` 
+
+Now we can start training the nn, and we will use a 10000 iterations and use the training set for each iteration.
+
+````javascript
+
+for (let i = 0; i < 1000; i++) {
+  train.forEach(x => {
+    const input = x.slice(0, -1).map(row => [row])
+    const output = [[x[x.length - 1]]]
+    nn.train(input, output)
+  })
+}
+
+````
+
+Using the remaining test set we  get around 88% accuracy, which is quite an improvement compared to the perceptron.
+
+````javascript
+
+let testResults = []
+    test.forEach(y => {
+      const input = y.map(x => [x])
+      const output = input.pop()
+      const result = nn.predict(input)
+      testResults.push({
+        output,
+        result
+      })
+    })
+
+    const correct = testResults.reduce((prev, next) => { return prev + (Math.round(next.result[0][0]) === next.output[0]) }, 0)
+    const successRate = correct / testResults.length
+    console.log("rate", successrate) //rate 0.8857142857142857
+```` 
+
+
 
 ## DecisionTree
 

@@ -21,6 +21,12 @@ class NeuralNetwork {
     this.setActivationFunction()
     this.setLearningRate()
 
+    // console.log('Init')
+    // console.log('weightsIh', this.weightsIh.__value)
+    // console.log('weightsHo', this.weightsIh.__value)
+    // console.log('biasH', this.biasH.__value)
+    // console.log('biasO', this.biasO.__value)
+
     this.type = 'NeuralNetwork'
   }
 }
@@ -74,18 +80,23 @@ NeuralNetwork.prototype.train = function (inputArray, targetArray) {
   // Generating the Hidden Outputs
   let inputs = Matrix.fromArray(inputArray)
   let hidden = Matrix.dot(this.weightsIh, inputs)
+    .add(this.biasH)
+    .map(row => row.map(this.activationFunction.func))
 
-  hidden = Matrix.of(hidden).add(this.biasH)
-  // activation function!
-  hidden = hidden.map(row => row.map(this.activationFunction.func))
+  // console.log('inputs', inputs.__value)
+  // console.log('hidden', hidden.__value)
 
   // Generating the output's output!
   let outputs = Matrix.dot(this.weightsHo, hidden)
-  outputs = Matrix.of(outputs).add(this.biasO)
-  outputs = outputs.map(row => row.map(this.activationFunction.func))
+    .add(this.biasO)
+    .map(row => row.map(this.activationFunction.func))
 
   // Convert array to matrix object
   let targets = Matrix.fromArray(targetArray)
+
+  // console.log('outputs', outputs.__value)
+  // console.log('targetArray', targetArray)
+  // console.log('targets', targets.__value)
 
   // Calculate the error
   // ERROR = TARGETS - OUTPUTS
@@ -94,8 +105,10 @@ NeuralNetwork.prototype.train = function (inputArray, targetArray) {
   // let gradient = outputs * (1 - outputs);
   // Calculate gradient
   let gradients = outputs.map(row => row.map(this.activationFunction.dfunc))
-  gradients = gradients.multiply(outputErrors)
-  gradients = gradients.multiply(this.learningRate)
+    .multiply(outputErrors)
+    .multiply(this.learningRate)
+
+  // console.log(outputErrors.__value, gradients.__value)
 
   // Calculate deltas
   let hiddenT = Matrix.transpose(hidden)
