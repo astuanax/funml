@@ -1,4 +1,5 @@
 import Matrix from '@astuanax/funmatrix'
+import { complement } from 'fun.js'
 import entropy from './util/entropy'
 import Node from './Node'
 
@@ -33,27 +34,19 @@ DecisionTree.prototype.getColumn = function (data, index) {
  * @returns {Matrix[]}
  */
 DecisionTree.prototype.split = function (data, m, n) {
-  let splittingFunction
-  //   splittingFunction = None
-  if (isNaN(m) || isNaN(n)) {
-    // strings
-    splittingFunction = row => row[m] === n
-  } else {
-    // numbers
-    splittingFunction = row => row[m] >= n
-  }
-  const left = data.fold((acc, x) => {
-    if (splittingFunction(x)) {
+  const splittingFunction = (isNaN(m) || isNaN(n))
+    ? strRow => strRow[m] === n
+    : nrRow => nrRow[m] >= n
+
+  const foldNode = (fn, data) => data.fold((acc, x) => {
+    if (fn(x)) {
       acc.push(x)
     }
     return acc
   })
-  const right = data.fold((acc, x) => {
-    if (!splittingFunction(x)) {
-      acc.push(x)
-    }
-    return acc
-  })
+
+  const left = foldNode(splittingFunction, data)
+  const right = foldNode(complement(splittingFunction), data)
   return [left, right]
 }
 
@@ -112,26 +105,17 @@ DecisionTree.prototype.train = function (data = this.data) {
 DecisionTree.prototype.predict = function predict (observations, node) {
   if (node.results) {
     return node.results
-  } else {
-    const v = observations[node.col]
-    let branch
-    if (isNaN(v)) {
-      // string
-      if (v === node.value) {
-        branch = node.left
-      } else {
-        branch = node.right
-      }
-    } else {
-      // number
-      if (v >= node.value) {
-        branch = node.left
-      } else {
-        branch = node.right
-      }
-    }
-    return this.predict(observations, branch)
   }
+  const v = observations[node.col]
+  const cond = isNaN(v)
+    ? (x, y) => x === y // not a number, assuming string
+    : (x, y) => x >= y // a number
+
+  let branch = cond(v, node.value)
+    ? node.left
+    : node.right
+
+  return this.predict(observations, branch)
 }
 
 export default DecisionTree
