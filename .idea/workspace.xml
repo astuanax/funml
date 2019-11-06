@@ -2,8 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e83c24ba-ba86-43d8-a3ae-0928eb1c0bfb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/util/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ActivationFunction.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/helpers.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/NeuralNetwork2.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/NeuralNetwork2.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ActivationFunction.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ActivationFunction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ActivationFunction.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ActivationFunction.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DecisionTree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DecisionTree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DecisionTree.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DecisionTree.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Impurity.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Impurity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Impurity.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Impurity.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/NeuralNetwork.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/NeuralNetwork.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/NeuralNetwork.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/NeuralNetwork.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Node.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Node.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Node.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Node.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Perceptron.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Perceptron.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/global.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/perceptron.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/perceptron.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/util_entropy.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_entropy.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/util_gini.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_gini.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/util_sigmoid.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_sigmoid.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/util_tanh.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_tanh.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/util_variance.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/util_variance.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/@astuanax/funml.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/@astuanax/funml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/@astuanax/funml.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/@astuanax/funml.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActivationFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActivationFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/entropy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/entropy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/gini.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/gini.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/sigmoid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/sigmoid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/tanh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/tanh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/DecisionTree.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/DecisionTree.spec.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +104,7 @@
       <workItem from="1561950843705" duration="1072000" />
       <workItem from="1569169113400" duration="853000" />
       <workItem from="1571079386526" duration="2856000" />
-      <workItem from="1572710284539" duration="8540000" />
+      <workItem from="1572710284539" duration="12654000" />
     </task>
     <servers />
   </component>

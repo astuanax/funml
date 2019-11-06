@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Impurity.js - Documentation</title>
+    <title>util/helpers.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Impurity.js</h1>
+    <h1 class="page-title">util/helpers.js</h1>
     
 
     
@@ -39,15 +39,29 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @class Impurity
- * @param func
+            <pre class="prettyprint source linenums"><code>import { fold } from 'fun.js'
+
+/**
+ * @function convert2frequencies
+ * @param total
+ * @returns {function(*=)}
  */
-export default class Impurity {
-  constructor (func) {
-    this.func = func
-  }
-}
+const convert2frequencies = total => obj => fold((acc, y) => {
+  acc.push(y / total)
+  return acc
+})([])(obj)
+
+/**
+ * @function countClasses
+ * @param arr
+ * @returns {*}
+ */
+const countClasses = arr => fold((acc, val) => {
+  acc[val] = acc[val] === undefined ? 1 : acc[val] += 1
+  return acc
+})({})(arr)
+
+export { convert2frequencies, countClasses }
 </code></pre>
         </article>
     </section>

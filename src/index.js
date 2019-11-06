@@ -1,3 +1,6 @@
+import { countClasses, convert2frequencies } from './util/helpers'
+export { countClasses, convert2frequencies }
+
 export { default as Perceptron } from './Perceptron'
 export { default as NeuralNetwork } from './NeuralNetwork'
 export { default as ActivationFunction } from './ActivationFunction'
