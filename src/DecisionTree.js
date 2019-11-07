@@ -2,6 +2,7 @@ import Matrix from '@astuanax/funmatrix'
 import { complement } from 'fun.js'
 import entropy from './util/entropy'
 import Node from './Node'
+import { countClasses } from './util/helpers'
 
 /**
  * @class DecisionTree
@@ -50,6 +51,13 @@ DecisionTree.prototype.split = function (data, m, n) {
   return [left, right]
 }
 
+DecisionTree.prototype.gain = function (matrixSplit, total, score) {
+  const p = matrixSplit[0].getRows() / total
+  const entropy0 = this.evalFunction.func(matrixSplit[0])
+  const entropy1 = this.evalFunction.func(matrixSplit[1])
+  return score - (p * entropy0) - ((1 - p) * entropy1)
+}
+
 /**
  * @memberOf DecisionTree#train
  * @param {Matrix} data
@@ -68,13 +76,10 @@ DecisionTree.prototype.train = function (data = this.data) {
   const columnCount = this.data.getCols() - 1 // remove last cell >> dependant value
 
   for (let i = 0; i < columnCount; ++i) {
-    const columnValues = this.getColumn(data, i).__value
+    const columnValues = data.getColumn(i)
     columnValues.forEach((value, idx) => {
       const matrixSplit = this.split(data, i, value)
-      const p = matrixSplit[0].getRows() / data.getRows()
-      const entropy0 = this.evalFunction.func(matrixSplit[0])
-      const entropy1 = this.evalFunction.func(matrixSplit[1])
-      const gain = score - (p * entropy0) - ((1 - p) * entropy1)
+      const gain = this.gain(matrixSplit, data.getRows(), score)
       if (gain > bestGain && matrixSplit[0].getRows() > 0 && matrixSplit[1].getRows() > 0) {
         bestGain = gain
         bestAttribute = [i, value]
@@ -84,16 +89,9 @@ DecisionTree.prototype.train = function (data = this.data) {
   }
 
   if (bestGain > 0) {
-    const leftTrained = this.train(bestSets[0])
-    const rightTrained = this.train(bestSets[1])
-    const _node = new Node(undefined, bestAttribute[0], bestAttribute[1], leftTrained, rightTrained)
-    return _node
-  } else {
-    return new Node(data.__value.map(row => row[row.length - 1]).reduce((acc, val) => {
-      acc[val] = acc[val] === undefined ? 1 : acc[val] += 1
-      return acc
-    }, {}))
+    return new Node(undefined, bestAttribute[0], bestAttribute[1], this.train(bestSets[0]), this.train(bestSets[1]))
   }
+  return new Node(countClasses(data.getColumn(data.getCols() - 1)))
 }
 
 /**
