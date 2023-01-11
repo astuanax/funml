@@ -72,6 +72,6 @@
   },
   "dependencies": {
     "@astuanax/funmatrix": "github:astuanax/funmatrix",
-    "fun.js": "^1.0.5"
+    "fun.js": "^1.0.6"
   }
 }
